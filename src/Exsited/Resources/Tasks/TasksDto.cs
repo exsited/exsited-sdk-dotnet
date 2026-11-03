@@ -1,15 +1,14 @@
 namespace Exsited.Resources.Tasks.TasksDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class Task : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/tasks",
     };
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ActualHours { get; set; }
 
     public string? Code { get; set; }
@@ -40,29 +39,29 @@ public sealed class Task : Dto
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Milestone { get; set; }
 
     public string? Name { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ParentTask { get; set; }
 
     public string? Priority { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Resource { get; set; }
 
     public long? SortOrder { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartAfter { get; set; }
 
     public string? StartDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? State { get; set; }
 
     public string? Status { get; set; }
@@ -71,14 +70,13 @@ public sealed class Task : Dto
 
     public long? Version { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Workflow { get; set; }
 }
 
 /// <summary>One page of <see cref="Task"/> records, under <c>data</c>.</summary>
 public sealed class TaskList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/tasks",
@@ -95,10 +93,9 @@ public sealed class TaskList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class TaskRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/tasks/{task_id}",
@@ -106,7 +103,7 @@ public sealed class TaskRead : Dto
 
     protected override string? EnvelopeKey => "work_task";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ActualHours { get; set; }
 
     public IReadOnlyList<object?>? Alerts { get; set; }
@@ -143,29 +140,29 @@ public sealed class TaskRead : Dto
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Milestone { get; set; }
 
     public string? Name { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ParentTask { get; set; }
 
     public string? Priority { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Resource { get; set; }
 
     public long? SortOrder { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartAfter { get; set; }
 
     public string? StartDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? State { get; set; }
 
     public string? Status { get; set; }
@@ -174,14 +171,13 @@ public sealed class TaskRead : Dto
 
     public long? Version { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Workflow { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class TaskChecklist : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/tasks/{task_id}/checklist",
@@ -191,22 +187,22 @@ public sealed class TaskChecklist : Dto
 
     protected override string? EnvelopeKey => "work_task";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ActualHours { get; set; }
 
     public IReadOnlyList<object?>? Alerts { get; set; }
 
     public Assignees? Assignees { get; set; }
 
-    /// <summary>Untyped: the records measured disagree on its type.</summary>
+    /// <summary>Untyped: the field's type varies.</summary>
     public object? Checklist { get; set; }
 
     public string? Code { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CompletedAt { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CompletedBy { get; set; }
 
     public CreatedBy? CreatedBy { get; set; }
@@ -219,10 +215,10 @@ public sealed class TaskChecklist : Dto
 
     public string? DisplayName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? DueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? EstimatedHours { get; set; }
 
     public string? Href { get; set; }
@@ -233,30 +229,30 @@ public sealed class TaskChecklist : Dto
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Milestone { get; set; }
 
     public string? Name { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ParentTask { get; set; }
 
     public string? Priority { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Resource { get; set; }
 
     public long? SortOrder { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartAfter { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? State { get; set; }
 
     public string? Status { get; set; }
@@ -265,14 +261,13 @@ public sealed class TaskChecklist : Dto
 
     public long? Version { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Workflow { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class TaskNote : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/tasks/{task_code}/notes",
@@ -282,7 +277,6 @@ public sealed class TaskNote : Dto
 /// <summary>One page of <see cref="TaskNote"/> records, under <c>data</c>.</summary>
 public sealed class TaskNoteList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/tasks/{task_code}/notes",
@@ -299,10 +293,9 @@ public sealed class TaskNoteList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class TaskUpdated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/tasks/{task_id}",
@@ -312,7 +305,7 @@ public sealed class TaskUpdated : Dto
 
     public IReadOnlyList<ActivityLog>? ActivityLogs { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ActualHours { get; set; }
 
     public IReadOnlyList<object?>? Alerts { get; set; }
@@ -337,10 +330,10 @@ public sealed class TaskUpdated : Dto
 
     public string? DisplayName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? DueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? EstimatedHours { get; set; }
 
     public string? Href { get; set; }
@@ -351,30 +344,30 @@ public sealed class TaskUpdated : Dto
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Milestone { get; set; }
 
     public string? Name { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ParentTask { get; set; }
 
     public string? Priority { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Resource { get; set; }
 
     public long? SortOrder { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartAfter { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? State { get; set; }
 
     public string? Status { get; set; }
@@ -383,11 +376,11 @@ public sealed class TaskUpdated : Dto
 
     public long? Version { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Workflow { get; set; }
 }
 
-/// <summary>An object sent as <c>completed_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>completed_by</c>.</summary>
 public sealed class CompletedBy : Dto
 {
     public string? Name { get; set; }
@@ -395,13 +388,13 @@ public sealed class CompletedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>checklist</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>checklist</c>.</summary>
 public sealed class Checklist : Dto
 {
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CompletedAt { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CompletedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -425,7 +418,7 @@ public sealed class Checklist : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>assignees</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>assignees</c>.</summary>
 public sealed class Assignees : Dto
 {
     public IReadOnlyList<object?>? ManuallyAddedAccountContacts { get; set; }
@@ -439,7 +432,7 @@ public sealed class Assignees : Dto
     public IReadOnlyList<object?>? SelectedOperators { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -447,7 +440,7 @@ public sealed class CreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedBy : Dto
 {
     public string? Name { get; set; }
@@ -455,13 +448,13 @@ public sealed class LastUpdatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>activity_logs</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>activity_logs</c>.</summary>
 public sealed class ActivityLog : Dto
 {
     public string? Activity { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>selected_labours</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>selected_labours</c>.</summary>
 public sealed class SelectedLabour : Dto
 {
     public long? DisplayOrder { get; set; }
@@ -472,13 +465,13 @@ public sealed class SelectedLabour : Dto
 
     public string? Name { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Responsibility { get; set; }
 
     public string? Uuid { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>selected_employees</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>selected_employees</c>.</summary>
 public sealed class SelectedEmployee : Dto
 {
     public long? DisplayOrder { get; set; }
@@ -489,13 +482,13 @@ public sealed class SelectedEmployee : Dto
 
     public string? Name { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Responsibility { get; set; }
 
     public string? Uuid { get; set; }
 }
 
-/// <summary>An object sent as <c>completed_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>completed_by</c>.</summary>
 public sealed class CompletedByEntry : Dto
 {
     public string? Name { get; set; }
@@ -503,7 +496,7 @@ public sealed class CompletedByEntry : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedByEntry : Dto
 {
     public string? Name { get; set; }
@@ -511,10 +504,9 @@ public sealed class LastUpdatedByEntry : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class TaskView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/tasks/{task_id}",
@@ -530,7 +522,7 @@ public sealed class TaskView : Dto
 
     public IReadOnlyList<TaskViewActivityLog>? ActivityLogs { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ActualHours { get; set; }
 
     public IReadOnlyList<object?>? Alerts { get; set; }
@@ -567,29 +559,29 @@ public sealed class TaskView : Dto
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Milestone { get; set; }
 
     public string? Name { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ParentTask { get; set; }
 
     public string? Priority { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Resource { get; set; }
 
     public long? SortOrder { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartAfter { get; set; }
 
     public string? StartDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? State { get; set; }
 
     public string? Status { get; set; }
@@ -598,11 +590,11 @@ public sealed class TaskView : Dto
 
     public long? Version { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Workflow { get; set; }
 }
 
-/// <summary>An object sent as <c>completed_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>completed_by</c>.</summary>
 public sealed class TaskViewCompletedBy : Dto
 {
     public string? Name { get; set; }
@@ -610,7 +602,7 @@ public sealed class TaskViewCompletedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>assignees</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>assignees</c>.</summary>
 public sealed class TaskViewAssignees : Dto
 {
     public IReadOnlyList<object?>? ManuallyAddedAccountContacts { get; set; }
@@ -624,7 +616,7 @@ public sealed class TaskViewAssignees : Dto
     public IReadOnlyList<object?>? SelectedOperators { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class TaskViewCreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -632,7 +624,7 @@ public sealed class TaskViewCreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class TaskViewLastUpdatedBy : Dto
 {
     public string? Name { get; set; }
@@ -640,13 +632,13 @@ public sealed class TaskViewLastUpdatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>activity_logs</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>activity_logs</c>.</summary>
 public sealed class TaskViewActivityLog : Dto
 {
     public string? Activity { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>selected_labours</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>selected_labours</c>.</summary>
 public sealed class TaskViewAssigneesSelectedLabour : Dto
 {
     public long? DisplayOrder { get; set; }
@@ -657,13 +649,13 @@ public sealed class TaskViewAssigneesSelectedLabour : Dto
 
     public string? Name { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Responsibility { get; set; }
 
     public string? Uuid { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>selected_employees</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>selected_employees</c>.</summary>
 public sealed class TaskViewAssigneesSelectedEmployee : Dto
 {
     public long? DisplayOrder { get; set; }
@@ -674,7 +666,7 @@ public sealed class TaskViewAssigneesSelectedEmployee : Dto
 
     public string? Name { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Responsibility { get; set; }
 
     public string? Uuid { get; set; }

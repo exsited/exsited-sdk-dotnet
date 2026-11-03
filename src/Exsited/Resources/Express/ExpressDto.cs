@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Express.ExpressDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ExpressView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/express",
@@ -17,7 +16,7 @@ public sealed class ExpressView : Dto
 
     public bool? AllowContract { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? BillingAddress { get; set; }
 
     public BillingPreferences? BillingPreferences { get; set; }
@@ -26,7 +25,7 @@ public sealed class ExpressView : Dto
 
     public IReadOnlyList<object?>? CommunicationPreferences { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -37,33 +36,33 @@ public sealed class ExpressView : Dto
 
     public CustomForm? CustomForm { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CustomerPurchaseOrderId { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? DiscountProfile { get; set; }
 
     public string? DisplayName { get; set; }
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? InvoiceNote { get; set; }
 
     public Kpis? Kpis { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public IReadOnlyList<Line>? Lines { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Manager { get; set; }
 
     public string? Name { get; set; }
@@ -76,7 +75,7 @@ public sealed class ExpressView : Dto
 
     public string? OrderType { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Origin { get; set; }
 
     public string? OriginalTotal { get; set; }
@@ -89,20 +88,20 @@ public sealed class ExpressView : Dto
 
     public bool? QuoteOrder { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ReferralAccount { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? SalesRep { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ShippingAddress { get; set; }
 
     public double? ShippingCost { get; set; }
 
     public IReadOnlyList<object?>? ShippingLineItems { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ShippingProfile { get; set; }
 
     public string? Status { get; set; }
@@ -118,7 +117,7 @@ public sealed class ExpressView : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>currency</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>currency</c>.</summary>
 public sealed class Currency : Dto
 {
     public string? Code { get; set; }
@@ -132,7 +131,7 @@ public sealed class Currency : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>time_zone</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>time_zone</c>.</summary>
 public sealed class TimeZone : Dto
 {
     public string? Href { get; set; }
@@ -144,7 +143,7 @@ public sealed class TimeZone : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>custom_form</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>custom_form</c>.</summary>
 public sealed class CustomForm : Dto
 {
     public string? Href { get; set; }
@@ -156,7 +155,7 @@ public sealed class CustomForm : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>account</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>account</c>.</summary>
 public sealed class Account : Dto
 {
     public string? Href { get; set; }
@@ -168,7 +167,7 @@ public sealed class Account : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>billing_preferences</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>billing_preferences</c>.</summary>
 public sealed class BillingPreferences : Dto
 {
     public string? BillingPeriod { get; set; }
@@ -196,7 +195,7 @@ public sealed class BillingPreferences : Dto
     public ProformaProperties? ProformaProperties { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>lines</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>lines</c>.</summary>
 public sealed class Line : Dto
 {
     public string? ChargeItemUuid { get; set; }
@@ -244,36 +243,36 @@ public sealed class Line : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>kpis</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>kpis</c>.</summary>
 public sealed class Kpis : Dto
 {
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? DeletedAt { get; set; }
 
     public string? EstimatedTotal { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastCancelledAt { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastChangedAt { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastInvoiceIssueDate { get; set; }
 
     public string? LastInvoiceTotal { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastReactivatedAt { get; set; }
 
     public string? MonthlyRecurringRevenue { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? NextInvoiceIssueDate { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? StartDate { get; set; }
 
     public string? TotalCollected { get; set; }
@@ -287,30 +286,30 @@ public sealed class Kpis : Dto
     public string? TotalRevenue { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>activity_logs</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>activity_logs</c>.</summary>
 public sealed class ActivityLog : Dto
 {
     public string? Activity { get; set; }
 }
 
-/// <summary>An object sent as <c>proforma_properties</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>proforma_properties</c>.</summary>
 public sealed class ProformaProperties : Dto
 {
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? AcceptanceDate { get; set; }
 
     public bool? AcceptanceRequired { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? AcceptanceTerm { get; set; }
 
     public bool? PaymentRequired { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? TermsAndConditions { get; set; }
 }
 
-/// <summary>An object sent as <c>item</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>item</c>.</summary>
 public sealed class Item : Dto
 {
     public string? Href { get; set; }
@@ -324,13 +323,13 @@ public sealed class Item : Dto
     public string? Uuid { get; set; }
 }
 
-/// <summary>An object sent as <c>item_price_snapshot</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>item_price_snapshot</c>.</summary>
 public sealed class ItemPriceSnapshot : Dto
 {
     public PricingRule? PricingRule { get; set; }
 }
 
-/// <summary>An object sent as <c>item_price_tax</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>item_price_tax</c>.</summary>
 public sealed class ItemPriceTax : Dto
 {
     public string? Href { get; set; }
@@ -344,7 +343,7 @@ public sealed class ItemPriceTax : Dto
     public double? Rate { get; set; }
 }
 
-/// <summary>An object sent as <c>item_sale_tax_configuration</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>item_sale_tax_configuration</c>.</summary>
 public sealed class ItemSaleTaxConfiguration : Dto
 {
     public string? SalePriceIsBasedOn { get; set; }
@@ -352,13 +351,13 @@ public sealed class ItemSaleTaxConfiguration : Dto
     public TaxCode? TaxCode { get; set; }
 }
 
-/// <summary>An object sent as <c>item_accounting_code</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>item_accounting_code</c>.</summary>
 public sealed class ItemAccountingCode : Dto
 {
     public string? SalesRevenue { get; set; }
 }
 
-/// <summary>An object sent as <c>pre_order_stock_details</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>pre_order_stock_details</c>.</summary>
 public sealed class PreOrderStockDetails : Dto
 {
     public string? PendingReserve { get; set; }
@@ -368,7 +367,7 @@ public sealed class PreOrderStockDetails : Dto
     public string? Sold { get; set; }
 }
 
-/// <summary>An object sent as <c>pricing_rule</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>pricing_rule</c>.</summary>
 public sealed class PricingRule : Dto
 {
     public double? Price { get; set; }
@@ -392,7 +391,7 @@ public sealed class PricingRule : Dto
     public string? Warehouse { get; set; }
 }
 
-/// <summary>An object sent as <c>tax_code</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>tax_code</c>.</summary>
 public sealed class TaxCode : Dto
 {
     public string? Code { get; set; }

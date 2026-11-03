@@ -1,9 +1,8 @@
 namespace Exsited.Resources.PurchaseRefunds.PurchaseRefundsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseRefundsView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_refunds",
@@ -52,10 +51,9 @@ public sealed class PurchaseRefundsView : Dto
     public string? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseRefund : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_refunds/{purchase_refund_id}",
@@ -97,7 +95,7 @@ public sealed class PurchaseRefund : Dto
 
     public string? PaymentProcessor { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     [WireName("purchase_refund")]
     public object? PurchaseRefundValue { get; set; }
 
@@ -110,7 +108,7 @@ public sealed class PurchaseRefund : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>account</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>account</c>.</summary>
 public sealed class Account : Dto
 {
     public string? Href { get; set; }
@@ -122,7 +120,7 @@ public sealed class Account : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>credit_note</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>credit_note</c>.</summary>
 public sealed class CreditNote : Dto
 {
     public string? Href { get; set; }
@@ -134,7 +132,7 @@ public sealed class CreditNote : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }

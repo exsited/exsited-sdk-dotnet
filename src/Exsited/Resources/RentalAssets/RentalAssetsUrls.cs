@@ -20,7 +20,7 @@ public static class RentalAssetsUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 6 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string RentalAssetKey = "rental_asset";
 
     /// <summary>The key one record arrives under, on <c>POST /api/{api_version}/rental_asset_profiles</c> and <c>GET /api/{api_version}/rental_asset_profiles/{rental_asset_profile_id}</c>.</summary>

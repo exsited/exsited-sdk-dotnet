@@ -104,7 +104,7 @@ public static class SettingsUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 4 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string ItemGroupKey = "item_group";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/settings/custom_logic_scripts/{custom_logic_script_id}</c>.</summary>
@@ -113,10 +113,10 @@ public static class SettingsUrls
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/settings/currencies/{currency_id}</c>.</summary>
     public const string CurrencyKey = "currency";
 
-    /// <summary>The key one record arrives under, on the 4 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string CustomObjectKey = "custom_object";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string VariationKey = "variation";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/settings/time_zones/{time_zone_id}</c>.</summary>
@@ -128,19 +128,19 @@ public static class SettingsUrls
     /// <summary>The key one record arrives under, on <c>PATCH /api/{api_version}/settings/general_settings/account</c> and <c>PATCH /api/{api_version}/settings/general_settings/item</c>.</summary>
     public const string GeneralSettingsKey = "general_settings";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string DiscountProfileKey = "discount_profile";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/settings/field_settings/{field_setting_id}</c>.</summary>
     public const string FieldSettingKey = "field_setting";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string PaymentProcessorKey = "payment_processor";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string PaymentTermKey = "payment_term";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string PricingLevelKey = "pricing_level";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/settings/shipping_profiles/{shipping_profile_id}</c> and <c>POST /api/{api_version}/settings/shipping_profiles</c>.</summary>
@@ -149,6 +149,6 @@ public static class SettingsUrls
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/settings/taxes/{tax_id}</c>.</summary>
     public const string TaxKey = "tax";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string WarehouseKey = "warehouse";
 }

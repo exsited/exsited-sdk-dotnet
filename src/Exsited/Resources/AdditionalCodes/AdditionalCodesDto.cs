@@ -1,9 +1,8 @@
 namespace Exsited.Resources.AdditionalCodes.AdditionalCodesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsAdditionalCode : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/additional_codes",
@@ -31,7 +30,6 @@ public sealed class SettingsAdditionalCode : Dto
 /// <summary>One page of <see cref="SettingsAdditionalCode"/> records, under <c>data</c>.</summary>
 public sealed class SettingsAdditionalCodeList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/additional_codes",

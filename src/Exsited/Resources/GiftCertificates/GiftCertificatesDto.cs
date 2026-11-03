@@ -1,9 +1,8 @@
 namespace Exsited.Resources.GiftCertificates.GiftCertificatesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class GiftCertificate : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/gift_certificates",
@@ -20,7 +19,7 @@ public sealed class GiftCertificate : Dto
 
     public string? Code { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -35,12 +34,12 @@ public sealed class GiftCertificate : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LinkedItem { get; set; }
 
     public string? Object { get; set; }
@@ -61,7 +60,6 @@ public sealed class GiftCertificate : Dto
 /// <summary>One page of <see cref="GiftCertificate"/> records, under <c>data</c>.</summary>
 public sealed class GiftCertificateList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/gift_certificates",
@@ -78,10 +76,9 @@ public sealed class GiftCertificateList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class GiftCertificateTransaction : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/gift_certificates/{gc_id}/transactions",
@@ -91,7 +88,7 @@ public sealed class GiftCertificateTransaction : Dto
 
     public string? Amount { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -104,14 +101,14 @@ public sealed class GiftCertificateTransaction : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Reference { get; set; }
 
     public string? Status { get; set; }
@@ -124,7 +121,6 @@ public sealed class GiftCertificateTransaction : Dto
 /// <summary>One page of <see cref="GiftCertificateTransaction"/> records, under <c>data</c>.</summary>
 public sealed class GiftCertificateTransactionList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/gift_certificates/{gc_id}/transactions",
@@ -141,10 +137,9 @@ public sealed class GiftCertificateTransactionList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class GiftCertificateAllocations : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/gift_certificates/{gc_id}/allocations",
@@ -159,10 +154,9 @@ public sealed class GiftCertificateAllocations : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class GiftCertificatesView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/gift_certificates",
@@ -180,7 +174,7 @@ public sealed class GiftCertificatesView : Dto
 
     public string? Code { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -195,13 +189,13 @@ public sealed class GiftCertificatesView : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LinkedItem { get; set; }
 
     public string? Object { get; set; }
@@ -217,10 +211,9 @@ public sealed class GiftCertificatesView : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class GiftCertificateUpdated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/gift_certificates/{gc_id}",
@@ -238,7 +231,7 @@ public sealed class GiftCertificateUpdated : Dto
 
     public string? Code { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -253,12 +246,12 @@ public sealed class GiftCertificateUpdated : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LinkedItem { get; set; }
 
     public string? Object { get; set; }
@@ -274,7 +267,7 @@ public sealed class GiftCertificateUpdated : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>currency</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>currency</c>.</summary>
 public sealed class Currency : Dto
 {
     public string? Href { get; set; }
@@ -286,7 +279,7 @@ public sealed class Currency : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>accounting_code</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>accounting_code</c>.</summary>
 public sealed class AccountingCode : Dto
 {
     public string? Href { get; set; }
@@ -298,14 +291,14 @@ public sealed class AccountingCode : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>transactions</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>transactions</c>.</summary>
 public sealed class Transaction : Dto
 {
     public AccountingCode? AccountingCode { get; set; }
 
     public string? Amount { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -318,14 +311,14 @@ public sealed class Transaction : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Reference { get; set; }
 
     public string? Status { get; set; }
@@ -335,22 +328,21 @@ public sealed class Transaction : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>activity_logs</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>activity_logs</c>.</summary>
 public sealed class ActivityLog : Dto
 {
     public string? Activity { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>activity_logs</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>activity_logs</c>.</summary>
 public sealed class GiftCertificateActivityLog : Dto
 {
     public string? Activity { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class GiftCertificateAllocationRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/gift_certificates/{gc_id}/allocations/{allocation_id}",
@@ -359,10 +351,9 @@ public sealed class GiftCertificateAllocationRead : Dto
     protected override string? EnvelopeKey => "gift_certificate_allocation";
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class GiftCertificateTransactionRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/gift_certificates/{gc_id}/transactions/{transaction_id}",

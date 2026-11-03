@@ -1,9 +1,8 @@
 namespace Exsited.Resources.ActionScripts.ActionScriptsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ActionScript : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/action_scripts",
@@ -14,7 +13,7 @@ public sealed class ActionScript : Dto
 
     protected override string? EnvelopeKey => "action_script";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ActionName { get; set; }
 
     public IReadOnlyList<object?>? ActivityLogs { get; set; }
@@ -33,14 +32,14 @@ public sealed class ActionScript : Dto
 
     public ActionScriptLastUpdatedBy? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public string? Name { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ObjectName { get; set; }
 
     public string? Status { get; set; }
@@ -49,7 +48,6 @@ public sealed class ActionScript : Dto
 /// <summary>One page of <see cref="ActionScript"/> records, under <c>data</c>.</summary>
 public sealed class ActionScriptList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/action_scripts",
@@ -66,7 +64,7 @@ public sealed class ActionScriptList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class ActionScriptCreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -74,7 +72,7 @@ public sealed class ActionScriptCreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class ActionScriptLastUpdatedBy : Dto
 {
     public string? Name { get; set; }

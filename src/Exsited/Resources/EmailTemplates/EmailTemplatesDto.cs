@@ -1,9 +1,8 @@
 namespace Exsited.Resources.EmailTemplates.EmailTemplatesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsEmailTemplate : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/email_templates",
@@ -14,7 +13,7 @@ public sealed class SettingsEmailTemplate : Dto
 
     protected override string? EnvelopeKey => "email_template";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -23,7 +22,7 @@ public sealed class SettingsEmailTemplate : Dto
 
     public string? DisplayName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Entity { get; set; }
 
     public string? Href { get; set; }
@@ -34,7 +33,7 @@ public sealed class SettingsEmailTemplate : Dto
 
     public bool? IsSystemTemplate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -43,15 +42,15 @@ public sealed class SettingsEmailTemplate : Dto
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ReplyAddress { get; set; }
 
     public bool? RichEditor { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? SenderAddress { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? SenderName { get; set; }
 
     public string? Status { get; set; }
@@ -66,7 +65,6 @@ public sealed class SettingsEmailTemplate : Dto
 /// <summary>One page of <see cref="SettingsEmailTemplate"/> records, under <c>data</c>.</summary>
 public sealed class SettingsEmailTemplateList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/email_templates",

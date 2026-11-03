@@ -1,9 +1,8 @@
 namespace Exsited.Resources.ExternalDatabases.ExternalDatabasesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ExternalDatabasesView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/external_databases",
@@ -19,10 +18,9 @@ public sealed class ExternalDatabasesView : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ExternalDatabaseTable : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/external_databases/{db_name}/tables/{table_name}",
@@ -32,7 +30,6 @@ public sealed class ExternalDatabaseTable : Dto
 /// <summary>One page of <see cref="ExternalDatabaseTable"/> records, under <c>data</c>.</summary>
 public sealed class ExternalDatabaseTableList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/external_databases/{db_name}/tables/{table_name}",
@@ -49,10 +46,9 @@ public sealed class ExternalDatabaseTableList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ExternalDatabasesCreated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/external_databases",
@@ -67,10 +63,9 @@ public sealed class ExternalDatabasesCreated : Dto
     public string? Name { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ExternalDatabaseInsertRecords : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/external_databases/{db_name}/insert_records",
@@ -85,10 +80,9 @@ public sealed class ExternalDatabaseInsertRecords : Dto
     public bool? Success { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ExternalDatabaseSearch : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/external_databases/{db_name}/search",
@@ -107,10 +101,9 @@ public sealed class ExternalDatabaseSearch : Dto
     public bool? Success { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ExternalDatabaseUpdateRecords : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/external_databases/{db_name}/update_records",

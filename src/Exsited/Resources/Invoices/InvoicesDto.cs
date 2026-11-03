@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Invoices.InvoicesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class Invoice : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices",
@@ -82,7 +81,6 @@ public sealed class Invoice : Dto
 /// <summary>One page of <see cref="Invoice"/> records, under <c>data</c>.</summary>
 public sealed class InvoiceList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices",
@@ -100,10 +98,9 @@ public sealed class InvoiceList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceItemFulfillment : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/item_fulfillments",
@@ -122,7 +119,7 @@ public sealed class InvoiceItemFulfillment : Dto
 
     public IReadOnlyDictionary<string, object?>? CustomAttributes { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? DeliveryStatus { get; set; }
 
     public bool? FulfillmentCompleted { get; set; }
@@ -147,7 +144,7 @@ public sealed class InvoiceItemFulfillment : Dto
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Order { get; set; }
 
     public string? Status { get; set; }
@@ -160,7 +157,6 @@ public sealed class InvoiceItemFulfillment : Dto
 /// <summary>One page of <see cref="InvoiceItemFulfillment"/> records, under <c>data</c>.</summary>
 public sealed class InvoiceItemFulfillmentList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/item_fulfillments",
@@ -177,10 +173,9 @@ public sealed class InvoiceItemFulfillmentList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceNote : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/notes",
@@ -194,7 +189,7 @@ public sealed class InvoiceNote : Dto
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Group { get; set; }
 
     public string? Href { get; set; }
@@ -203,15 +198,15 @@ public sealed class InvoiceNote : Dto
 
     public IReadOnlyDictionary<string, object?>? Invoice { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? User { get; set; }
 
     public long? Version { get; set; }
@@ -222,7 +217,6 @@ public sealed class InvoiceNote : Dto
 /// <summary>One page of <see cref="InvoiceNote"/> records, under <c>data</c>.</summary>
 public sealed class InvoiceNoteList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/notes",
@@ -239,10 +233,9 @@ public sealed class InvoiceNoteList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}",
@@ -333,10 +326,9 @@ public sealed class InvoiceRead : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoicesView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/invoices",
@@ -395,7 +387,7 @@ public sealed class InvoicesView : Dto
 
     public IReadOnlyDictionary<string, object?>? Kpis { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastPayment { get; set; }
 
     public LastUpdatedBy? LastUpdatedBy { get; set; }
@@ -437,10 +429,9 @@ public sealed class InvoicesView : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceInformation : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/invoices/{invoice_id}/information",
@@ -496,7 +487,7 @@ public sealed class InvoiceInformation : Dto
 
     public IReadOnlyDictionary<string, object?>? Kpis { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastPayment { get; set; }
 
     public LastUpdatedBy? LastUpdatedBy { get; set; }
@@ -507,7 +498,7 @@ public sealed class InvoiceInformation : Dto
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Order { get; set; }
 
     public string? OrderId { get; set; }
@@ -539,10 +530,9 @@ public sealed class InvoiceInformation : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceReactivate : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/invoices/{invoice_id}/reactivate",
@@ -596,7 +586,7 @@ public sealed class InvoiceReactivate : Dto
 
     public IReadOnlyDictionary<string, object?>? Kpis { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastPayment { get; set; }
 
     public LastUpdatedBy? LastUpdatedBy { get; set; }
@@ -607,7 +597,7 @@ public sealed class InvoiceReactivate : Dto
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Order { get; set; }
 
     public string? OrderId { get; set; }
@@ -637,10 +627,9 @@ public sealed class InvoiceReactivate : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceInformationRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/information",
@@ -719,10 +708,9 @@ public sealed class InvoiceInformationRead : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceDeleted : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "DELETE /api/{api_version}/invoices/{invoice_id}",
@@ -764,7 +752,7 @@ public sealed class InvoiceDeleted : Dto
 
     public IReadOnlyDictionary<string, object?>? Kpis { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastPayment { get; set; }
 
     public string? LastUpdatedBy { get; set; }
@@ -800,10 +788,9 @@ public sealed class InvoiceDeleted : Dto
     public string? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceReturnMerchandiseAuthorisation : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/return_merchandise_authorisations/{rma_id}",
@@ -825,10 +812,10 @@ public sealed class InvoiceReturnMerchandiseAuthorisation : Dto
 
     public long? ItemCount { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public IReadOnlyList<object?>? Lines { get; set; }
@@ -845,21 +832,20 @@ public sealed class InvoiceReturnMerchandiseAuthorisation : Dto
 
     public IReadOnlyDictionary<string, object?>? SaleInvoice { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? SaleOrder { get; set; }
 
     public string? Status { get; set; }
 
     public long? Version { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Warehouse { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class AccountInvoices : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/accounts/{account_id}/invoices",
@@ -875,10 +861,9 @@ public sealed class AccountInvoices : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceNoteRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/notes/{invoice_note_id}",
@@ -894,7 +879,7 @@ public sealed class InvoiceNoteRead : Dto
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Group { get; set; }
 
     public string? Href { get; set; }
@@ -903,17 +888,17 @@ public sealed class InvoiceNoteRead : Dto
 
     public InvoiceEntry? Invoice { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public IReadOnlyDictionary<string, object?>? Note { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? User { get; set; }
 
     public long? Version { get; set; }
@@ -921,10 +906,9 @@ public sealed class InvoiceNoteRead : Dto
     public IReadOnlyList<Watcher>? Watchers { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoicePdf : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/pdf",
@@ -935,10 +919,9 @@ public sealed class InvoicePdf : Dto
     public Pdf? Pdf { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceNoteFile : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/notes/{invoice_note_id}/files",
@@ -961,7 +944,6 @@ public sealed class InvoiceNoteFile : Dto
 /// <summary>One page of <see cref="InvoiceNoteFile"/> records, under <c>data</c>.</summary>
 public sealed class InvoiceNoteFileList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/notes/{invoice_note_id}/files",
@@ -978,10 +960,9 @@ public sealed class InvoiceNoteFileList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceNotes : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/invoices/{invoice_id}/notes",
@@ -997,7 +978,7 @@ public sealed class InvoiceNotes : Dto
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Group { get; set; }
 
     public string? Href { get; set; }
@@ -1006,15 +987,15 @@ public sealed class InvoiceNotes : Dto
 
     public InvoiceEntry? Invoice { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? User { get; set; }
 
     public long? Version { get; set; }
@@ -1022,7 +1003,7 @@ public sealed class InvoiceNotes : Dto
     public IReadOnlyList<Watcher>? Watchers { get; set; }
 }
 
-/// <summary>An object sent as <c>pdf</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>pdf</c>.</summary>
 public sealed class Pdf : Dto
 {
     public string? DownloadUrl { get; set; }
@@ -1036,7 +1017,7 @@ public sealed class Pdf : Dto
     public string? PreviewUrl { get; set; }
 }
 
-/// <summary>An object sent as <c>invoice</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>invoice</c>.</summary>
 public sealed class InvoiceEntry : Dto
 {
     public string? Href { get; set; }
@@ -1046,7 +1027,7 @@ public sealed class InvoiceEntry : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>attachments</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>attachments</c>.</summary>
 public sealed class Attachment : Dto
 {
     public string? ContentType { get; set; }
@@ -1060,7 +1041,7 @@ public sealed class Attachment : Dto
     public string? Uuid { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>watchers</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>watchers</c>.</summary>
 public sealed class Watcher : Dto
 {
     public string? Email { get; set; }
@@ -1070,7 +1051,7 @@ public sealed class Watcher : Dto
     public string? Type { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -1078,7 +1059,7 @@ public sealed class CreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>account</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>account</c>.</summary>
 public sealed class Account : Dto
 {
     public string? Href { get; set; }
@@ -1090,7 +1071,7 @@ public sealed class Account : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>order</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>order</c>.</summary>
 public sealed class Order : Dto
 {
     public string? Href { get; set; }
@@ -1102,7 +1083,7 @@ public sealed class Order : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedBy : Dto
 {
     public string? Name { get; set; }
@@ -1110,7 +1091,7 @@ public sealed class LastUpdatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>lines</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>lines</c>.</summary>
 public sealed class Line : Dto
 {
     public AccountingCode? AccountingCode { get; set; }
@@ -1129,17 +1110,17 @@ public sealed class Line : Dto
 
     public long? ItemOrderQuantity { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ItemUom { get; set; }
 
     public string? ItemUuid { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ItemWarehouse { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? PricingSnapshotPrice { get; set; }
 
     public string? PricingSnapshotUuid { get; set; }
@@ -1153,7 +1134,7 @@ public sealed class Line : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>item</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>item</c>.</summary>
 public sealed class Item : Dto
 {
     public string? Href { get; set; }
@@ -1165,7 +1146,7 @@ public sealed class Item : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>tax</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>tax</c>.</summary>
 public sealed class Tax : Dto
 {
     public string? Amount { get; set; }
@@ -1181,14 +1162,14 @@ public sealed class Tax : Dto
     public double? Rate { get; set; }
 }
 
-/// <summary>An object sent as <c>accounting_code</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>accounting_code</c>.</summary>
 public sealed class AccountingCode : Dto
 {
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? SalesRevenue { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedByEntry : Dto
 {
     public string? Name { get; set; }
@@ -1196,7 +1177,7 @@ public sealed class CreatedByEntry : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedByEntry : Dto
 {
     public string? Name { get; set; }
@@ -1204,7 +1185,7 @@ public sealed class LastUpdatedByEntry : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>tax</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>tax</c>.</summary>
 public sealed class LineTax : Dto
 {
     public string? Object { get; set; }
@@ -1221,7 +1202,7 @@ public sealed class LineTax : Dto
     public string? Href { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>lines</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>lines</c>.</summary>
 public sealed class InvoiceLine : Dto
 {
     public string? Object { get; set; }
@@ -1274,7 +1255,7 @@ public sealed class InvoiceLine : Dto
     public AccountingCode? AccountingCode { get; set; }
 }
 
-/// <summary>An object sent as <c>item</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>item</c>.</summary>
 public sealed class InvoiceLineItem : Dto
 {
     public string? Href { get; set; }
@@ -1314,10 +1295,9 @@ public sealed class InvoiceLineRead : Dto
     public InvoiceLine? Line { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteApplicationRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_note_applications/{credit_note_application_id}",
@@ -1339,7 +1319,7 @@ public sealed class CreditNoteApplicationRead : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -1360,7 +1340,7 @@ public sealed class CreditNoteApplicationRead : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreditNoteApplicationReadCreatedBy : Dto
 {
     public string? Id { get; set; }
@@ -1370,7 +1350,7 @@ public sealed class CreditNoteApplicationReadCreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>credit_note</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>credit_note</c>.</summary>
 public sealed class CreditNoteApplicationReadDetail : Dto
 {
     public string? Href { get; set; }
@@ -1382,7 +1362,7 @@ public sealed class CreditNoteApplicationReadDetail : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>payment</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>payment</c>.</summary>
 public sealed class CreditNoteApplicationReadPayment : Dto
 {
     public string? Href { get; set; }
@@ -1394,7 +1374,7 @@ public sealed class CreditNoteApplicationReadPayment : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>refund</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>refund</c>.</summary>
 public sealed class CreditNoteApplicationReadRefund : Dto
 {
     public string? Href { get; set; }

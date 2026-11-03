@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Approvals.ApprovalsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ApprovalsAccount : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/approvals/account",
@@ -11,7 +10,7 @@ public sealed class ApprovalsAccount : Dto
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
     public string? DisplayName { get; set; }
@@ -36,7 +35,6 @@ public sealed class ApprovalsAccount : Dto
 /// <summary>One page of <see cref="ApprovalsAccount"/> records, under <c>data</c>.</summary>
 public sealed class ApprovalsAccountList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/approvals/account",
@@ -53,10 +51,9 @@ public sealed class ApprovalsAccountList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ApprovalsSaleorder : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/approvals/saleOrder",

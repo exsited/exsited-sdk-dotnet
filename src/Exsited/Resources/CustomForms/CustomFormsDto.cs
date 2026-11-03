@@ -1,9 +1,8 @@
 namespace Exsited.Resources.CustomForms.CustomFormsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsCustomForm : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/custom_forms",
@@ -14,7 +13,7 @@ public sealed class SettingsCustomForm : Dto
 
     protected override string? EnvelopeKey => "custom_form";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -31,7 +30,7 @@ public sealed class SettingsCustomForm : Dto
 
     public bool? IsSystemTemplate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -46,7 +45,6 @@ public sealed class SettingsCustomForm : Dto
 /// <summary>One page of <see cref="SettingsCustomForm"/> records, under <c>data</c>.</summary>
 public sealed class SettingsCustomFormList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/custom_forms",

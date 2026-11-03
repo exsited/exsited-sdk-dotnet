@@ -1,9 +1,8 @@
 namespace Exsited.Resources.AccountGroups.AccountGroupsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsAccountGroup : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/account_groups",
@@ -13,13 +12,13 @@ public sealed class SettingsAccountGroup : Dto
 
     protected override string? EnvelopeKey => "account_group";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? AccountingCode { get; set; }
 
-    /// <summary>Present but empty on every record measured, so the element type is unknown.</summary>
+    /// <summary>Entries are untyped.</summary>
     public IReadOnlyList<object?>? CustomAttributes { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
     public string? DisplayName { get; set; }
@@ -30,14 +29,14 @@ public sealed class SettingsAccountGroup : Dto
 
     public IReadOnlyList<string>? InvoiceAccountMedia { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ManagedBy { get; set; }
 
     public string? Name { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? PricingLevel { get; set; }
 
     public SettingsAccountGroupStateRule? StateRule { get; set; }
@@ -48,7 +47,6 @@ public sealed class SettingsAccountGroup : Dto
 /// <summary>One page of <see cref="SettingsAccountGroup"/> records, under <c>data</c>.</summary>
 public sealed class SettingsAccountGroupList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/account_groups",
@@ -65,7 +63,7 @@ public sealed class SettingsAccountGroupList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>state_rule</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>state_rule</c>.</summary>
 public sealed class SettingsAccountGroupStateRule : Dto
 {
     public string? Href { get; set; }

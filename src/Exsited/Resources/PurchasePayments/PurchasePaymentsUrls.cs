@@ -22,7 +22,7 @@ public static class PurchasePaymentsUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 6 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string PurchasePaymentKey = "purchase_payment";
 
     /// <summary>A record key no view in this family unwraps.</summary>

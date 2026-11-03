@@ -1,9 +1,8 @@
 namespace Exsited.Resources.PricingPeriods.PricingPeriodsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsPricingPeriod : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/pricing_periods",
@@ -14,7 +13,7 @@ public sealed class SettingsPricingPeriod : Dto
 
     protected override string? EnvelopeKey => "pricing_period";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -27,7 +26,7 @@ public sealed class SettingsPricingPeriod : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -44,7 +43,6 @@ public sealed class SettingsPricingPeriod : Dto
 /// <summary>One page of <see cref="SettingsPricingPeriod"/> records, under <c>data</c>.</summary>
 public sealed class SettingsPricingPeriodList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/pricing_periods",
@@ -61,7 +59,7 @@ public sealed class SettingsPricingPeriodList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>time_period</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>time_period</c>.</summary>
 public sealed class SettingsPricingPeriodTimePeriod : Dto
 {
     public string? Href { get; set; }

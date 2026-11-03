@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Milestones.MilestonesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class MilestonesView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/milestones",
@@ -20,10 +19,9 @@ public sealed class MilestonesView : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class MilestonesLabour : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/milestones/labour/{labour_id}",
@@ -33,7 +31,6 @@ public sealed class MilestonesLabour : Dto
 /// <summary>One page of <see cref="MilestonesLabour"/> records, under <c>data</c>.</summary>
 public sealed class MilestonesLabourList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/milestones/labour/{labour_id}",

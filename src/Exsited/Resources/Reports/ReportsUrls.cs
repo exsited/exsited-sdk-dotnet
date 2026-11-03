@@ -17,6 +17,6 @@ public static class ReportsUrls
 
     public const string ReportsTransactionsPaymentAndRefundOverview = "/api/{api_version}/reports/transactions/payment_and_refund_overview";
 
-    /// <summary>The key one record arrives under, on the 7 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string ReportKey = "report";
 }

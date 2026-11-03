@@ -1,9 +1,8 @@
 namespace Exsited.Resources.CommunicationProfiles.CommunicationProfilesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsCommunicationProfile : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/communication_profiles",
@@ -12,7 +11,7 @@ public sealed class SettingsCommunicationProfile : Dto
 
     protected override string? EnvelopeKey => "communication_profile";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -25,7 +24,7 @@ public sealed class SettingsCommunicationProfile : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -40,7 +39,6 @@ public sealed class SettingsCommunicationProfile : Dto
 /// <summary>One page of <see cref="SettingsCommunicationProfile"/> records, under <c>data</c>.</summary>
 public sealed class SettingsCommunicationProfileList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/communication_profiles",

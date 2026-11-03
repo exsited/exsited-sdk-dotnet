@@ -25,8 +25,7 @@ public sealed class Workflows : BoundResource
                 ResponseFormat = responseFormat,
             }, cancellationToken);
 
-    /// <summary><c>PATCH /api/{api_version}/workflow/component/{cc_id}</c>.
-    /// Answers 405, and the documented route takes two slots where this path has one.</summary>
+    /// <summary><c>PATCH /api/{api_version}/workflow/component/{cc_id}</c>.</summary>
     public Task<ApiResponse> UpdateWorkflowComponentByIdAsync(
         string ccId, object payload,
         bool? raiseOnError = null, CancellationToken cancellationToken = default,
@@ -58,8 +57,7 @@ public sealed class Workflows : BoundResource
                 DtoType = typeof(WorkflowMilestoneList),
             }, cancellationToken);
 
-    /// <summary><c>POST /api/{api_version}/workflow/component/{cc_id}/milestone</c>.
-    /// Answers 405, and the documented route takes two slots where this path has one.</summary>
+    /// <summary><c>POST /api/{api_version}/workflow/component/{cc_id}/milestone</c>.</summary>
     public Task<ApiResponse> CreateWorkflowComponentCcMilestoneAsync(
         string ccId, object payload,
         bool? raiseOnError = null, CancellationToken cancellationToken = default,
@@ -284,8 +282,7 @@ public sealed class Workflows : BoundResource
         client.Workflows.DeleteMilestoneAsync(
             milestoneUuid, raiseOnError, cancellationToken, responseFormat);
 
-    /// <summary>The client-first form of <c>client.Workflows.UpdateWorkflowComponentByIdAsync</c>.
-    /// Answers 405, and the documented route takes two slots where this path has one.</summary>
+    /// <summary>The client-first form of <c>client.Workflows.UpdateWorkflowComponentByIdAsync</c>.</summary>
     public static Task<ApiResponse> UpdateWorkflowComponentByIdAsync(
         ExsitedClient client,
         string ccId, object payload,
@@ -303,8 +300,7 @@ public sealed class Workflows : BoundResource
         client.Workflows.GetWorkflowMilestonesAsync(
             workflowUuid, queryParams, raiseOnError, cancellationToken, responseFormat);
 
-    /// <summary>The client-first form of <c>client.Workflows.CreateWorkflowComponentCcMilestoneAsync</c>.
-    /// Answers 405, and the documented route takes two slots where this path has one.</summary>
+    /// <summary>The client-first form of <c>client.Workflows.CreateWorkflowComponentCcMilestoneAsync</c>.</summary>
     public static Task<ApiResponse> CreateWorkflowComponentCcMilestoneAsync(
         ExsitedClient client,
         string ccId, object payload,

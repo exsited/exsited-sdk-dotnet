@@ -40,13 +40,13 @@ public static class PurchaseInvoicesUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 12 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string PurchaseInvoiceKey = "purchase_invoice";
 
     /// <summary>A record key no view in this family unwraps.</summary>
     public const string WatcherListKey = "watcherList";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string NoteKey = "note";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes/{note_id}/files</c> and <c>GET /api/{api_version}/purchase_invoices/{purchase_invoice_id}/notes/{note_id}/files/{file_id}</c>.</summary>

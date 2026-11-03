@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Reports.ReportsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReportsAccountsAccountOverview : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/reports/accounts/account_overview",
@@ -14,10 +13,9 @@ public sealed class ReportsAccountsAccountOverview : Dto
     public IReadOnlyDictionary<string, object?>? Accounts { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReportsInvoicesInvoiceOverview : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/reports/invoices/invoice_overview",
@@ -28,10 +26,9 @@ public sealed class ReportsInvoicesInvoiceOverview : Dto
     public Invoices? Invoices { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReportsOrdersOrderOverview : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/reports/orders/order_overview",
@@ -42,10 +39,9 @@ public sealed class ReportsOrdersOrderOverview : Dto
     public Orders? Orders { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReportsPurchaseInvoicesPurchaseInvoiceOverview : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/reports/purchase_invoices/purchase_invoice_overview",
@@ -56,10 +52,9 @@ public sealed class ReportsPurchaseInvoicesPurchaseInvoiceOverview : Dto
     public PurchaseInvoices? PurchaseInvoices { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReportsPurchaseOrdersPurchaseOrderOverview : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/reports/purchase_orders/purchase_order_overview",
@@ -70,10 +65,9 @@ public sealed class ReportsPurchaseOrdersPurchaseOrderOverview : Dto
     public PurchaseOrders? PurchaseOrders { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReportsPurchaseTransactionsPurchasePaymentAndRefundOverview : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/reports/purchase_transactions/purchase_payment_and_refund_overview",
@@ -84,10 +78,9 @@ public sealed class ReportsPurchaseTransactionsPurchasePaymentAndRefundOverview 
     public PurchasePaymentAndRefundOverview? PurchasePaymentAndRefundOverview { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReportsTransactionsPaymentAndRefundOverview : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/reports/transactions/payment_and_refund_overview",
@@ -98,31 +91,31 @@ public sealed class ReportsTransactionsPaymentAndRefundOverview : Dto
     public PaymentAndRefundOverview? PaymentAndRefundOverview { get; set; }
 }
 
-/// <summary>An object sent as <c>invoices</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>invoices</c>.</summary>
 public sealed class Invoices : Dto
 {
     public IReadOnlyList<InvoiceOverview>? InvoiceOverview { get; set; }
 }
 
-/// <summary>An object sent as <c>orders</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>orders</c>.</summary>
 public sealed class Orders : Dto
 {
     public IReadOnlyList<OrderOverview>? OrderOverview { get; set; }
 }
 
-/// <summary>An object sent as <c>purchase_invoices</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>purchase_invoices</c>.</summary>
 public sealed class PurchaseInvoices : Dto
 {
     public IReadOnlyList<PurchaseInvoiceOverview>? PurchaseInvoiceOverview { get; set; }
 }
 
-/// <summary>An object sent as <c>purchase_orders</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>purchase_orders</c>.</summary>
 public sealed class PurchaseOrders : Dto
 {
     public IReadOnlyList<PurchaseOrderOverview>? PurchaseOrderOverview { get; set; }
 }
 
-/// <summary>An object sent as <c>purchase_payment_and_refund_overview</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>purchase_payment_and_refund_overview</c>.</summary>
 public sealed class PurchasePaymentAndRefundOverview : Dto
 {
     public IReadOnlyList<PurchasePayment>? PurchasePayments { get; set; }
@@ -130,7 +123,7 @@ public sealed class PurchasePaymentAndRefundOverview : Dto
     public IReadOnlyList<PurchaseRefund>? PurchaseRefunds { get; set; }
 }
 
-/// <summary>An object sent as <c>payment_and_refund_overview</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>payment_and_refund_overview</c>.</summary>
 public sealed class PaymentAndRefundOverview : Dto
 {
     public IReadOnlyList<Payment>? Payments { get; set; }
@@ -138,7 +131,7 @@ public sealed class PaymentAndRefundOverview : Dto
     public IReadOnlyList<Refund>? Refunds { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>invoice_overview</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>invoice_overview</c>.</summary>
 public sealed class InvoiceOverview : Dto
 {
     public Amended? Amended { get; set; }
@@ -158,7 +151,7 @@ public sealed class InvoiceOverview : Dto
     public Voided? Voided { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>order_overview</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>order_overview</c>.</summary>
 public sealed class OrderOverview : Dto
 {
     public Cancelled? Cancelled { get; set; }
@@ -178,7 +171,7 @@ public sealed class OrderOverview : Dto
     public Reactivated? Reactivated { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>purchase_invoice_overview</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>purchase_invoice_overview</c>.</summary>
 public sealed class PurchaseInvoiceOverview : Dto
 {
     public Amended? Amended { get; set; }
@@ -198,7 +191,7 @@ public sealed class PurchaseInvoiceOverview : Dto
     public Voided? Voided { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>purchase_order_overview</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>purchase_order_overview</c>.</summary>
 public sealed class PurchaseOrderOverview : Dto
 {
     public Cancelled? Cancelled { get; set; }
@@ -218,7 +211,7 @@ public sealed class PurchaseOrderOverview : Dto
     public Reactivated? Reactivated { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>purchase_payments</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>purchase_payments</c>.</summary>
 public sealed class PurchasePayment : Dto
 {
     public string? Date { get; set; }
@@ -230,7 +223,7 @@ public sealed class PurchasePayment : Dto
     public string? PurchasePaymentApplied { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>purchase_refunds</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>purchase_refunds</c>.</summary>
 public sealed class PurchaseRefund : Dto
 {
     public string? Date { get; set; }
@@ -240,7 +233,7 @@ public sealed class PurchaseRefund : Dto
     public New? New { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>payments</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>payments</c>.</summary>
 public sealed class Payment : Dto
 {
     public string? Date { get; set; }
@@ -252,7 +245,7 @@ public sealed class Payment : Dto
     public string? PaymentApplied { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>refunds</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>refunds</c>.</summary>
 public sealed class Refund : Dto
 {
     public string? Date { get; set; }
@@ -262,7 +255,7 @@ public sealed class Refund : Dto
     public New? New { get; set; }
 }
 
-/// <summary>An object sent as <c>new</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>new</c>.</summary>
 public sealed class New : Dto
 {
     public string? Amount { get; set; }
@@ -270,7 +263,7 @@ public sealed class New : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>cancelled</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>cancelled</c>.</summary>
 public sealed class Cancelled : Dto
 {
     public string? Amount { get; set; }
@@ -278,7 +271,7 @@ public sealed class Cancelled : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>reactivated</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>reactivated</c>.</summary>
 public sealed class Reactivated : Dto
 {
     public string? Amount { get; set; }
@@ -286,7 +279,7 @@ public sealed class Reactivated : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>voided</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>voided</c>.</summary>
 public sealed class Voided : Dto
 {
     public string? Amount { get; set; }
@@ -294,7 +287,7 @@ public sealed class Voided : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>amended</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>amended</c>.</summary>
 public sealed class Amended : Dto
 {
     public string? Amount { get; set; }
@@ -302,7 +295,7 @@ public sealed class Amended : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>net_gain</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>net_gain</c>.</summary>
 public sealed class NetGain : Dto
 {
     public string? Amount { get; set; }
@@ -310,7 +303,7 @@ public sealed class NetGain : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>changed</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>changed</c>.</summary>
 public sealed class Changed : Dto
 {
     public string? Amount { get; set; }
@@ -318,7 +311,7 @@ public sealed class Changed : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>deleted</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>deleted</c>.</summary>
 public sealed class Deleted : Dto
 {
     public string? Amount { get; set; }
@@ -326,7 +319,7 @@ public sealed class Deleted : Dto
     public string? Count { get; set; }
 }
 
-/// <summary>An object sent as <c>net_purchases</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>net_purchases</c>.</summary>
 public sealed class NetPurchases : Dto
 {
     public string? Amount { get; set; }

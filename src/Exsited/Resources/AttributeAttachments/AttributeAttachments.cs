@@ -2,7 +2,7 @@ using Exsited.Client;
 
 namespace Exsited.Resources.AttributeAttachments;
 
-/// <summary>The v4 attribute attachments endpoints, as a typed resource bound to one client. None names a typed view: no success response was ever recorded to measure one from.</summary>
+/// <summary>The v4 attribute attachments endpoints, as a typed resource bound to one client. None names a typed view.</summary>
 public sealed class AttributeAttachments : BoundResource
 {
     /// <summary>Bind to a client; normally reached as <c>client.AttributeAttachments</c>.</summary>

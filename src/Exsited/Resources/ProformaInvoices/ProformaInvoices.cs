@@ -3,7 +3,7 @@ using Exsited.Errors;
 
 namespace Exsited.Resources.ProformaInvoices;
 
-/// <summary>The v4 proforma invoices endpoints, as a typed resource bound to one client. None names a typed view: no success response was ever recorded to measure one from.</summary>
+/// <summary>The v4 proforma invoices endpoints, as a typed resource bound to one client. None names a typed view.</summary>
 public sealed class ProformaInvoices : BoundResource
 {
     /// <summary>Bind to a client; normally reached as <c>client.ProformaInvoices</c>.</summary>

@@ -1,9 +1,8 @@
 namespace Exsited.Resources.CustomComponents.CustomComponentsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class Component : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/component",
@@ -16,12 +15,12 @@ public sealed class Component : Dto
 
     public IReadOnlyList<object?>? ChildCustomComponents { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CustomComponent { get; set; }
 
     public IReadOnlyList<object?>? CustomForms { get; set; }
@@ -36,7 +35,7 @@ public sealed class Component : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -53,14 +52,13 @@ public sealed class Component : Dto
 
     public long? Version { get; set; }
 
-    /// <summary>On the create answer only, and empty in every one measured.</summary>
+    /// <summary>On the create answer only.</summary>
     public IReadOnlyList<object?>? ActivityLogs { get; set; }
 }
 
 /// <summary>One page of <see cref="Component"/> records, under <c>data</c>.</summary>
 public sealed class ComponentList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/component",
@@ -77,10 +75,9 @@ public sealed class ComponentList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentByUuid : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/component/{component_uuid}",
@@ -125,10 +122,9 @@ public sealed class ComponentByUuid : Dto
     public string? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObject : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}",
@@ -182,20 +178,19 @@ public sealed class ComponentObject : Dto
 
     public IReadOnlyList<object?>? WorkflowData { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? WorkflowStage { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? WorkflowStatus { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? WorkflowStatusUuid { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjects : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects",
@@ -210,10 +205,9 @@ public sealed class ComponentObjects : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>No endpoint names this view; the endpoints it was measured from answer <see cref="ComponentObjectActivityList"/>.</summary>
+/// <summary>No endpoint names this view directly.</summary>
 public sealed class ComponentObjectActivity : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity",
@@ -226,10 +220,9 @@ public sealed class ComponentObjectActivity : Dto
     public IReadOnlyDictionary<string, object?>? Pagination { get; set; }
 }
 
-/// <summary>No endpoint names this view; the endpoints it was measured from answer <see cref="ComponentObjectCustomObjectList"/>.</summary>
+/// <summary>No endpoint names this view directly.</summary>
 public sealed class ComponentObjectCustomObjects : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/custom_objects",
@@ -238,10 +231,9 @@ public sealed class ComponentObjectCustomObjects : Dto
     public IReadOnlyList<object?>? CustomObjects { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjectActivityRow : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity",
@@ -251,7 +243,6 @@ public sealed class ComponentObjectActivityRow : Dto
 /// <summary>One page of <see cref="ComponentObjectActivityRow"/> records, under <c>data</c>.</summary>
 public sealed class ComponentObjectActivityList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity",
@@ -268,10 +259,9 @@ public sealed class ComponentObjectActivityList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjectCustomObject : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/custom_objects",
@@ -281,7 +271,6 @@ public sealed class ComponentObjectCustomObject : Dto
 /// <summary>One page of <see cref="ComponentObjectCustomObject"/> records, under <c>data</c>.</summary>
 public sealed class ComponentObjectCustomObjectList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/custom_objects",
@@ -298,7 +287,7 @@ public sealed class ComponentObjectCustomObjectList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>component</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>component</c>.</summary>
 public sealed class ComponentEntry : Dto
 {
     public string? Href { get; set; }
@@ -310,10 +299,9 @@ public sealed class ComponentEntry : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjectRecord : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/components/{component_uuid}/objects",
@@ -327,16 +315,15 @@ public sealed class ComponentObjectRecord : Dto
     public string? LastUpdatedOn { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>activity_logs</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>activity_logs</c>.</summary>
 public sealed class ComponentObjectRecordActivityLog : Dto
 {
     public string? Activity { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjectActivityEntry : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity",
@@ -345,7 +332,7 @@ public sealed class ComponentObjectActivityEntry : Dto
 
     protected override string? EnvelopeKey => "custom_component_object_activity";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -367,10 +354,9 @@ public sealed class ComponentObjectActivityEntry : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjectNote : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes",
@@ -391,7 +377,7 @@ public sealed class ComponentObjectNote : Dto
 
     public ComponentObjectNoteCustomComponentObject? CustomComponentObject { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Group { get; set; }
 
     public string? Href { get; set; }
@@ -404,7 +390,7 @@ public sealed class ComponentObjectNote : Dto
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? User { get; set; }
 
     public long? Version { get; set; }
@@ -415,7 +401,6 @@ public sealed class ComponentObjectNote : Dto
 /// <summary>One page of <see cref="ComponentObjectNote"/> records, under <c>data</c>.</summary>
 public sealed class ComponentObjectNotes : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes",
@@ -432,7 +417,7 @@ public sealed class ComponentObjectNotes : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>attachments</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>attachments</c>.</summary>
 public sealed class ComponentObjectNoteAttachment : Dto
 {
     public string? ContentType { get; set; }
@@ -446,7 +431,7 @@ public sealed class ComponentObjectNoteAttachment : Dto
     public string? Uuid { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class ComponentObjectNoteCreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -454,7 +439,7 @@ public sealed class ComponentObjectNoteCreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>custom_component_object</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>custom_component_object</c>.</summary>
 public sealed class ComponentObjectNoteCustomComponentObject : Dto
 {
     public string? Href { get; set; }
@@ -464,7 +449,7 @@ public sealed class ComponentObjectNoteCustomComponentObject : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class ComponentObjectNoteLastUpdatedBy : Dto
 {
     public string? Name { get; set; }
@@ -472,10 +457,9 @@ public sealed class ComponentObjectNoteLastUpdatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjectNoteFiles : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes/{note_id}/files",
@@ -490,10 +474,9 @@ public sealed class ComponentObjectNoteFiles : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ComponentObjectNoteFile : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes/{note_id}/files/{file_id}",

@@ -1,9 +1,8 @@
 namespace Exsited.Resources.RentalAssets.RentalAssetsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAsset : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/rental_assets",
@@ -30,10 +29,10 @@ public sealed class RentalAsset : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ImageName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Item { get; set; }
 
     public LastUpdatedByEntry? LastUpdatedBy { get; set; }
@@ -60,7 +59,6 @@ public sealed class RentalAsset : Dto
 /// <summary>One page of <see cref="RentalAsset"/> records, under <c>data</c>.</summary>
 public sealed class RentalAssetList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/rental_assets",
@@ -77,10 +75,9 @@ public sealed class RentalAssetList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetProfile : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/rental_asset_profiles",
@@ -104,7 +101,7 @@ public sealed class RentalAssetProfile : Dto
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? MaxBookingLimit { get; set; }
 
     public string? Name { get; set; }
@@ -117,7 +114,7 @@ public sealed class RentalAssetProfile : Dto
 
     public string? Status { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Tax { get; set; }
 
     public long? Version { get; set; }
@@ -126,7 +123,6 @@ public sealed class RentalAssetProfile : Dto
 /// <summary>One page of <see cref="RentalAssetProfile"/> records, under <c>data</c>.</summary>
 public sealed class RentalAssetProfileList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/rental_asset_profiles",
@@ -143,10 +139,9 @@ public sealed class RentalAssetProfileList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetAvailability : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/rental_asset_availability",
@@ -184,7 +179,6 @@ public sealed class RentalAssetAvailability : Dto
 /// <summary>One page of <see cref="RentalAssetAvailability"/> records, under <c>data</c>.</summary>
 public sealed class RentalAssetAvailabilityList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/rental_asset_availability",
@@ -201,10 +195,9 @@ public sealed class RentalAssetAvailabilityList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetProfileRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/rental_asset_profiles/{rental_asset_profile_id}",
@@ -230,7 +223,7 @@ public sealed class RentalAssetProfileRead : Dto
 
     public string? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? MaxBookingLimit { get; set; }
 
     public string? Name { get; set; }
@@ -243,16 +236,15 @@ public sealed class RentalAssetProfileRead : Dto
 
     public string? Status { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Tax { get; set; }
 
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetProfiles : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/rental_asset_profiles",
@@ -276,13 +268,13 @@ public sealed class RentalAssetProfiles : Dto
 
     public bool? IsTaxInclusive { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? MaxBookingLimit { get; set; }
 
     public string? Name { get; set; }
@@ -295,16 +287,15 @@ public sealed class RentalAssetProfiles : Dto
 
     public string? Status { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Tax { get; set; }
 
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetsView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/rental_assets",
@@ -324,7 +315,7 @@ public sealed class RentalAssetsView : Dto
 
     public CustomForm? CustomForm { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
     public string? DisplayName { get; set; }
@@ -333,16 +324,16 @@ public sealed class RentalAssetsView : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ImageName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Item { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public string? Name { get; set; }
@@ -362,10 +353,9 @@ public sealed class RentalAssetsView : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetUpdated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/rental_assets/{rental_asset_uuid}",
@@ -393,10 +383,10 @@ public sealed class RentalAssetUpdated : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ImageName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Item { get; set; }
 
     public LastUpdatedBy? LastUpdatedBy { get; set; }
@@ -420,10 +410,9 @@ public sealed class RentalAssetUpdated : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetCancel : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/rental_assets/{rental_asset_id}/cancel",
@@ -451,10 +440,10 @@ public sealed class RentalAssetCancel : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ImageName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Item { get; set; }
 
     public LastUpdatedBy? LastUpdatedBy { get; set; }
@@ -478,10 +467,9 @@ public sealed class RentalAssetCancel : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class RentalAssetReactivate : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/rental_assets/{rental_asset_id}/reactivate",
@@ -509,10 +497,10 @@ public sealed class RentalAssetReactivate : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ImageName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Item { get; set; }
 
     public LastUpdatedBy? LastUpdatedBy { get; set; }
@@ -536,7 +524,7 @@ public sealed class RentalAssetReactivate : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>currency</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>currency</c>.</summary>
 public sealed class Currency : Dto
 {
     public string? Href { get; set; }
@@ -548,7 +536,7 @@ public sealed class Currency : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>rental_assets</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>rental_assets</c>.</summary>
 public sealed class RentalAssetEntry : Dto
 {
     public string? DisplayName { get; set; }
@@ -557,7 +545,7 @@ public sealed class RentalAssetEntry : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ImageName { get; set; }
 
     public string? Name { get; set; }
@@ -569,7 +557,7 @@ public sealed class RentalAssetEntry : Dto
     public bool? UseCustomAvailability { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>rental_asset_profile_sessions</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>rental_asset_profile_sessions</c>.</summary>
 public sealed class RentalAssetProfileSession : Dto
 {
     public string? EndDate { get; set; }
@@ -591,7 +579,7 @@ public sealed class RentalAssetProfileSession : Dto
     public string? Status { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -599,7 +587,7 @@ public sealed class CreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedBy : Dto
 {
     public string? Name { get; set; }
@@ -607,7 +595,7 @@ public sealed class LastUpdatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>rental_asset_profile</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>rental_asset_profile</c>.</summary>
 public sealed class RentalAssetProfileEntry : Dto
 {
     public string? Href { get; set; }
@@ -619,7 +607,7 @@ public sealed class RentalAssetProfileEntry : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>custom_form</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>custom_form</c>.</summary>
 public sealed class CustomForm : Dto
 {
     public string? Href { get; set; }
@@ -631,7 +619,7 @@ public sealed class CustomForm : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>schedule_list</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>schedule_list</c>.</summary>
 public sealed class ScheduleList : Dto
 {
     public string? Available { get; set; }
@@ -645,13 +633,13 @@ public sealed class ScheduleList : Dto
     public string? Uuid { get; set; }
 }
 
-/// <summary>An object sent as <c>processed_schedule_list</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>processed_schedule_list</c>.</summary>
 public sealed class ProcessedScheduleList : Dto
 {
 
 }
 
-/// <summary>One entry of a list sent as <c>rental_asset_profile_session_prices</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>rental_asset_profile_session_prices</c>.</summary>
 public sealed class RentalAssetProfileSessionPrice : Dto
 {
     public string? Id { get; set; }
@@ -664,7 +652,7 @@ public sealed class RentalAssetProfileSessionPrice : Dto
 
     public string? PriceType { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? PricingLevel { get; set; }
 
     public IReadOnlyList<object?>? RentalAssetProfileSessionPriceHours { get; set; }
@@ -674,7 +662,7 @@ public sealed class RentalAssetProfileSessionPrice : Dto
     public string? Status { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>rental_asset_profile_session_availability</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>rental_asset_profile_session_availability</c>.</summary>
 public sealed class RentalAssetProfileSessionAvailability : Dto
 {
     public bool? Available { get; set; }
@@ -692,7 +680,7 @@ public sealed class RentalAssetProfileSessionAvailability : Dto
     public string? Status { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>rental_asset_profile_session_working_hours</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>rental_asset_profile_session_working_hours</c>.</summary>
 public sealed class RentalAssetProfileSessionWorkingHour : Dto
 {
     public string? EndTime { get; set; }
@@ -706,7 +694,7 @@ public sealed class RentalAssetProfileSessionWorkingHour : Dto
     public string? Status { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedByEntry : Dto
 {
     public string? Name { get; set; }

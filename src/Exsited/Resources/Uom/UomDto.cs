@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Uom.UomDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsUom : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/uom",
@@ -12,12 +11,12 @@ public sealed class SettingsUom : Dto
 
     protected override string? EnvelopeKey => "uom";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CustomType { get; set; }
 
     public long? DecimalPlaces { get; set; }
@@ -30,7 +29,7 @@ public sealed class SettingsUom : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -51,7 +50,6 @@ public sealed class SettingsUom : Dto
 /// <summary>One page of <see cref="SettingsUom"/> records, under <c>data</c>.</summary>
 public sealed class SettingsUomList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/uom",

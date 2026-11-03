@@ -38,10 +38,10 @@ public static class PurchaseOrdersUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 7 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string PurchaseOrderKey = "purchase_order";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string NoteKey = "note";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/purchase_orders/{purchase_order_id}/lines/{purchase_order_line_uuid}</c>.</summary>

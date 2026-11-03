@@ -3,7 +3,7 @@ using Exsited.Errors;
 
 namespace Exsited.Resources.AbaFiles;
 
-/// <summary>The v4 aba files endpoints, as a typed resource bound to one client. None names a typed view: no success response was ever recorded to measure one from.</summary>
+/// <summary>The v4 aba files endpoints, as a typed resource bound to one client. None names a typed view.</summary>
 public sealed class AbaFiles : BoundResource
 {
     /// <summary>Bind to a client; normally reached as <c>client.AbaFiles</c>.</summary>

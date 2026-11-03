@@ -1,9 +1,8 @@
 namespace Exsited.Resources.ReturnVendorAuthorizations.ReturnVendorAuthorizationsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReturnVendorAuthorization : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/return_vendor_authorizations",
@@ -23,10 +22,10 @@ public sealed class ReturnVendorAuthorization : Dto
 
     public long? ItemCount { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public string? Note { get; set; }
@@ -47,7 +46,6 @@ public sealed class ReturnVendorAuthorization : Dto
 /// <summary>One page of <see cref="ReturnVendorAuthorization"/> records, under <c>data</c>.</summary>
 public sealed class ReturnVendorAuthorizationList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/return_vendor_authorizations",
@@ -64,10 +62,9 @@ public sealed class ReturnVendorAuthorizationList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class ReturnVendorAuthorizationView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/return_vendor_authorizations/{rva_id}",
@@ -75,14 +72,14 @@ public sealed class ReturnVendorAuthorizationView : Dto
 
     protected override string? EnvelopeKey => "return_vendor_authorization";
 
-    /// <summary>Empty in every record measured, so the entries are untyped.</summary>
+    /// <summary>Entries are untyped.</summary>
     public IReadOnlyList<object?>? Lines { get; set; }
 
-    /// <summary>Empty in every record measured, so the entries are untyped.</summary>
+    /// <summary>Entries are untyped.</summary>
     public IReadOnlyList<object?>? ReceiveRvas { get; set; }
 }
 
-/// <summary>An object sent as <c>account</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>account</c>.</summary>
 public sealed class ReturnVendorAuthorizationAccount : Dto
 {
     public string? Code { get; set; }
@@ -96,7 +93,7 @@ public sealed class ReturnVendorAuthorizationAccount : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>purchase_order</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>purchase_order</c>.</summary>
 public sealed class ReturnVendorAuthorizationPurchaseOrder : Dto
 {
     public string? Code { get; set; }
@@ -108,7 +105,7 @@ public sealed class ReturnVendorAuthorizationPurchaseOrder : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class ReturnVendorAuthorizationCreatedBy : Dto
 {
     public string? Name { get; set; }

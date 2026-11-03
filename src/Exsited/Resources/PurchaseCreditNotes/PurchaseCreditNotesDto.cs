@@ -1,9 +1,8 @@
 namespace Exsited.Resources.PurchaseCreditNotes.PurchaseCreditNotesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseCreditNote : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_credit_notes",
@@ -63,7 +62,6 @@ public sealed class PurchaseCreditNote : Dto
 /// <summary>One page of <see cref="PurchaseCreditNote"/> records, under <c>data</c>.</summary>
 public sealed class PurchaseCreditNoteList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_credit_notes",
@@ -80,10 +78,9 @@ public sealed class PurchaseCreditNoteList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseCreditNoteRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_credit_notes/{purchase_credit_note_id}",
@@ -130,10 +127,9 @@ public sealed class PurchaseCreditNoteRead : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseCreditNoteUpdated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/purchase_credit_notes/{purchase_credit_note_id}",
@@ -154,7 +150,7 @@ public sealed class PurchaseCreditNoteUpdated : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>status</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>status</c>.</summary>
 public sealed class Status : Dto
 {
     public string? Key { get; set; }
@@ -162,7 +158,7 @@ public sealed class Status : Dto
     public string? Value { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -170,7 +166,7 @@ public sealed class CreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedBy : Dto
 {
     public string? Name { get; set; }
@@ -178,10 +174,9 @@ public sealed class LastUpdatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseCreditNoteCreated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/purchase_credit_notes",
@@ -189,7 +184,7 @@ public sealed class PurchaseCreditNoteCreated : Dto
 
     protected override string? EnvelopeKey => "purchase_credit_note";
 
-    /// <summary>Empty in every record measured, so its entries are untyped.</summary>
+    /// <summary>Entries are untyped.</summary>
     public IReadOnlyList<object?>? ActivityLogs { get; set; }
 
     public string? Code { get; set; }
@@ -211,7 +206,7 @@ public sealed class PurchaseCreditNoteCreated : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>status</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>status</c>.</summary>
 public sealed class PurchaseCreditNoteCreatedStatus : Dto
 {
     public string? Key { get; set; }

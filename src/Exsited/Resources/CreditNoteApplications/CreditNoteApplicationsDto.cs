@@ -1,9 +1,8 @@
 namespace Exsited.Resources.CreditNoteApplications.CreditNoteApplicationsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteApplication : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_note_applications",
@@ -27,7 +26,7 @@ public sealed class CreditNoteApplication : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -57,7 +56,6 @@ public sealed class CreditNoteApplication : Dto
 /// <summary>One page of <see cref="CreditNoteApplication"/> records, under <c>data</c>.</summary>
 public sealed class CreditNoteApplicationList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_note_applications",
@@ -74,10 +72,9 @@ public sealed class CreditNoteApplicationList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteApplicationRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_note_applications/{credit_note_application_id}",
@@ -99,7 +96,7 @@ public sealed class CreditNoteApplicationRead : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -120,10 +117,9 @@ public sealed class CreditNoteApplicationRead : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class InvoiceCreditNoteApplications : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/invoices/{invoice_id}/credit_note_applications",
@@ -138,7 +134,7 @@ public sealed class InvoiceCreditNoteApplications : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Id { get; set; }

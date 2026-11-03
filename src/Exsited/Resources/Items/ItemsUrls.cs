@@ -54,10 +54,10 @@ public static class ItemsUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 4 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string NoteKey = "note";
 
-    /// <summary>The key one record arrives under, on the 24 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string ItemKey = "item";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/items/{item_id}/notes/{item_note_id}/files</c> and <c>GET /api/{api_version}/items/{item_id}/notes/{item_note_id}/files/{item_file_id}</c>.</summary>

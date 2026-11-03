@@ -1,9 +1,8 @@
 namespace Exsited.Resources.InvoiceTerms.InvoiceTermsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsInvoiceTerm : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/invoice_terms",
@@ -32,7 +31,6 @@ public sealed class SettingsInvoiceTerm : Dto
 /// <summary>One page of <see cref="SettingsInvoiceTerm"/> records, under <c>data</c>.</summary>
 public sealed class SettingsInvoiceTermList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/invoice_terms",
@@ -49,7 +47,7 @@ public sealed class SettingsInvoiceTermList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>duration</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>duration</c>.</summary>
 public sealed class SettingsInvoiceTermDuration : Dto
 {
     public long? Count { get; set; }
@@ -57,10 +55,9 @@ public sealed class SettingsInvoiceTermDuration : Dto
     public string? Period { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsInvoiceTermWrite : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/settings/invoice_terms",
@@ -69,7 +66,7 @@ public sealed class SettingsInvoiceTermWrite : Dto
 
     protected override string? EnvelopeKey => "invoice_term";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -84,7 +81,7 @@ public sealed class SettingsInvoiceTermWrite : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }

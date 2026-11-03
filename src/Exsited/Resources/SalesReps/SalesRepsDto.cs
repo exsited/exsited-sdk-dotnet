@@ -1,9 +1,8 @@
 namespace Exsited.Resources.SalesReps.SalesRepsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsSalesRep : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/sales_reps",
@@ -12,7 +11,7 @@ public sealed class SettingsSalesRep : Dto
 
     protected override string? EnvelopeKey => "sales_rep";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -27,7 +26,7 @@ public sealed class SettingsSalesRep : Dto
 
     public string? LastName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -44,7 +43,6 @@ public sealed class SettingsSalesRep : Dto
 /// <summary>One page of <see cref="SettingsSalesRep"/> records, under <c>data</c>.</summary>
 public sealed class SettingsSalesRepList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/sales_reps",

@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Workflows.WorkflowsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class WorkflowMilestone : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/workflows/{workflow_uuid}/milestones",
@@ -11,22 +10,22 @@ public sealed class WorkflowMilestone : Dto
 
     public ActivityDefinition? ActivityDefinition { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? AutoCreate { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
     public string? DisplayName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? EstimatedHours { get; set; }
 
     public string? Href { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Icon { get; set; }
 
     public string? Id { get; set; }
@@ -39,7 +38,7 @@ public sealed class WorkflowMilestone : Dto
 
     public string? Priority { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? SortOrder { get; set; }
 
     public string? Status { get; set; }
@@ -52,7 +51,6 @@ public sealed class WorkflowMilestone : Dto
 /// <summary>One page of <see cref="WorkflowMilestone"/> records, under <c>data</c>.</summary>
 public sealed class WorkflowMilestoneList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/workflows/{workflow_uuid}/milestones",
@@ -69,7 +67,7 @@ public sealed class WorkflowMilestoneList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>workflow</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>workflow</c>.</summary>
 public sealed class Workflow : Dto
 {
     public string? Href { get; set; }
@@ -82,12 +80,12 @@ public sealed class Workflow : Dto
 
     public string? Status { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Code { get; set; }
 
     public string? DisplayName { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
     public string? Entity { get; set; }
@@ -102,7 +100,7 @@ public sealed class Workflow : Dto
 
     public WorkflowCurrentVersion? CurrentVersion { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CustomForm { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -114,7 +112,7 @@ public sealed class Workflow : Dto
     public WorkflowLastUpdatedBy? LastUpdatedBy { get; set; }
 }
 
-/// <summary>An object sent as <c>activity_definition</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>activity_definition</c>.</summary>
 public sealed class ActivityDefinition : Dto
 {
     public string? Id { get; set; }
@@ -124,7 +122,7 @@ public sealed class ActivityDefinition : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>workflow_version</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>workflow_version</c>.</summary>
 public sealed class WorkflowVersion : Dto
 {
     public string? Id { get; set; }
@@ -134,10 +132,9 @@ public sealed class WorkflowVersion : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class WorkflowList : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/workflows",
@@ -152,10 +149,9 @@ public sealed class WorkflowList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class WorkflowView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/workflows/{workflow_id}",
@@ -164,7 +160,7 @@ public sealed class WorkflowView : Dto
     protected override string? EnvelopeKey => "workflow";
 }
 
-/// <summary>An object sent as <c>current_version</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>current_version</c>.</summary>
 public sealed class WorkflowCurrentVersion : Dto
 {
     public string? Object { get; set; }
@@ -174,7 +170,7 @@ public sealed class WorkflowCurrentVersion : Dto
     public string? Name { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class WorkflowCreatedBy : Dto
 {
     public string? Object { get; set; }
@@ -182,7 +178,7 @@ public sealed class WorkflowCreatedBy : Dto
     public string? Name { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class WorkflowLastUpdatedBy : Dto
 {
     public string? Object { get; set; }
@@ -190,10 +186,9 @@ public sealed class WorkflowLastUpdatedBy : Dto
     public string? Name { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class WorkflowMilestoneView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/workflows/{workflow_id}/milestones/{milestone_id}",

@@ -3,7 +3,7 @@ using Exsited.Errors;
 
 namespace Exsited.Resources.Communications;
 
-/// <summary>The v4 communications endpoints, as a typed resource bound to one client. None names a typed view: no success response was ever recorded to measure one from.</summary>
+/// <summary>The v4 communications endpoints, as a typed resource bound to one client. None names a typed view.</summary>
 public sealed class Communications : BoundResource
 {
     /// <summary>Bind to a client; normally reached as <c>client.Communications</c>.</summary>

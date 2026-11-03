@@ -2,7 +2,7 @@ using Exsited.Client;
 
 namespace Exsited.Resources.Reconciliations;
 
-/// <summary>The v4 reconciliations endpoints, as a typed resource bound to one client. None names a typed view: no success response was ever recorded to measure one from.</summary>
+/// <summary>The v4 reconciliations endpoints, as a typed resource bound to one client. None names a typed view.</summary>
 public sealed class Reconciliations : BoundResource
 {
     /// <summary>Bind to a client; normally reached as <c>client.Reconciliations</c>.</summary>

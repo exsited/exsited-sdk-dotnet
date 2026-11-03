@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Timesheets.TimesheetsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class Timesheet : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/timesheets",
@@ -41,7 +40,6 @@ public sealed class Timesheet : Dto
 /// <summary>One page of <see cref="Timesheet"/> records, under <c>data</c>.</summary>
 public sealed class TimesheetList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/timesheets",
@@ -58,10 +56,9 @@ public sealed class TimesheetList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class TimesheetsView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/timesheets",
@@ -84,10 +81,10 @@ public sealed class TimesheetsView : Dto
 
     public Labour? Labour { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public string? Object { get; set; }
@@ -103,10 +100,9 @@ public sealed class TimesheetsView : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class TimesheetUpdated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/timesheets/{timesheet_id}",
@@ -145,7 +141,7 @@ public sealed class TimesheetUpdated : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>labour</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>labour</c>.</summary>
 public sealed class Labour : Dto
 {
     public string? Href { get; set; }
@@ -157,7 +153,7 @@ public sealed class Labour : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>sale_order_item</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>sale_order_item</c>.</summary>
 public sealed class SaleOrderItem : Dto
 {
     public string? Href { get; set; }
@@ -169,7 +165,7 @@ public sealed class SaleOrderItem : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>sale_order</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>sale_order</c>.</summary>
 public sealed class SaleOrder : Dto
 {
     public string? Href { get; set; }
@@ -181,7 +177,7 @@ public sealed class SaleOrder : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -189,13 +185,13 @@ public sealed class CreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>activity_logs</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>activity_logs</c>.</summary>
 public sealed class ActivityLog : Dto
 {
     public string? Activity { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedBy : Dto
 {
     public string? Name { get; set; }
@@ -203,7 +199,7 @@ public sealed class LastUpdatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedByEntry : Dto
 {
     public string? Name { get; set; }

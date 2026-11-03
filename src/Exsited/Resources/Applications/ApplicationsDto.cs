@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Applications.ApplicationsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsApplication : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/applications",
@@ -14,7 +13,7 @@ public sealed class SettingsApplication : Dto
 
     protected override string? EnvelopeKey => "application";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -27,7 +26,7 @@ public sealed class SettingsApplication : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -42,7 +41,6 @@ public sealed class SettingsApplication : Dto
 /// <summary>One page of <see cref="SettingsApplication"/> records, under <c>data</c>.</summary>
 public sealed class SettingsApplicationList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/applications",

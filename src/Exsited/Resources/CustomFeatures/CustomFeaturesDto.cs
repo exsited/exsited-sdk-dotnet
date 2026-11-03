@@ -1,9 +1,8 @@
 namespace Exsited.Resources.CustomFeatures.CustomFeaturesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CustomFeature : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/custom_feature",
@@ -18,12 +17,12 @@ public sealed class CustomFeature : Dto
 
     public IReadOnlyList<object?>? ChildCustomComponents { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CustomComponent { get; set; }
 
     public IReadOnlyList<CustomForm>? CustomForms { get; set; }
@@ -38,7 +37,7 @@ public sealed class CustomFeature : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -61,13 +60,13 @@ public sealed class CustomFeature : Dto
     public CustomFeatureDetail? CustomFeatureValue { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>custom_forms</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>custom_forms</c>.</summary>
 public sealed class CustomForm : Dto
 {
     public Configuration? Configuration { get; set; }
 }
 
-/// <summary>An object sent as <c>configuration</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>configuration</c>.</summary>
 public sealed class Configuration : Dto
 {
     public Column1? Column1 { get; set; }
@@ -77,19 +76,19 @@ public sealed class Configuration : Dto
     public SettingsEntry? Settings { get; set; }
 }
 
-/// <summary>An object sent as <c>column_1</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>column_1</c>.</summary>
 public sealed class Column1 : Dto
 {
     public IReadOnlyList<AttributeEntry>? Attributes { get; set; }
 }
 
-/// <summary>An object sent as <c>column_2</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>column_2</c>.</summary>
 public sealed class Column2 : Dto
 {
     public IReadOnlyList<AttributeEntry>? Attributes { get; set; }
 }
 
-/// <summary>An object sent as <c>settings</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>settings</c>.</summary>
 public sealed class SettingsEntry : Dto
 {
     public string? CustomForm { get; set; }
@@ -97,7 +96,7 @@ public sealed class SettingsEntry : Dto
     public string? FormLayout { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>attributes</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>attributes</c>.</summary>
 public sealed class AttributeEntry : Dto
 {
     public string? DataType { get; set; }
@@ -111,10 +110,9 @@ public sealed class AttributeEntry : Dto
     public string? Type { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CustomFeatureList : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/custom_feature",
@@ -129,19 +127,19 @@ public sealed class CustomFeatureList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>data</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>data</c>.</summary>
 public sealed class CustomFeatureDetail : Dto
 {
     public IReadOnlyList<object?>? ActivityLogs { get; set; }
 
     public IReadOnlyList<object?>? ChildCustomComponents { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CustomComponent { get; set; }
 
     public IReadOnlyList<CustomFeatureDetailCustomForm>? CustomForms { get; set; }
@@ -156,7 +154,7 @@ public sealed class CustomFeatureDetail : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -174,13 +172,13 @@ public sealed class CustomFeatureDetail : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>custom_forms</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>custom_forms</c>.</summary>
 public sealed class CustomFeatureDetailCustomForm : Dto
 {
     public CustomFeatureDetailCustomFormConfiguration? Configuration { get; set; }
 }
 
-/// <summary>An object sent as <c>configuration</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>configuration</c>.</summary>
 public sealed class CustomFeatureDetailCustomFormConfiguration : Dto
 {
     public CustomFeatureDetailCustomFormConfigurationColumn1? Column1 { get; set; }
@@ -190,19 +188,19 @@ public sealed class CustomFeatureDetailCustomFormConfiguration : Dto
     public CustomFeatureDetailCustomFormConfigurationSettings? Settings { get; set; }
 }
 
-/// <summary>An object sent as <c>column_1</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>column_1</c>.</summary>
 public sealed class CustomFeatureDetailCustomFormConfigurationColumn1 : Dto
 {
     public IReadOnlyList<CustomFeatureDetailCustomFormConfigurationColumn1Attribute>? Attributes { get; set; }
 }
 
-/// <summary>An object sent as <c>column_2</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>column_2</c>.</summary>
 public sealed class CustomFeatureDetailCustomFormConfigurationColumn2 : Dto
 {
     public IReadOnlyList<CustomFeatureDetailCustomFormConfigurationColumn2Attribute>? Attributes { get; set; }
 }
 
-/// <summary>An object sent as <c>settings</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>settings</c>.</summary>
 public sealed class CustomFeatureDetailCustomFormConfigurationSettings : Dto
 {
     public string? CustomForm { get; set; }
@@ -210,7 +208,7 @@ public sealed class CustomFeatureDetailCustomFormConfigurationSettings : Dto
     public string? FormLayout { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>attributes</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>attributes</c>.</summary>
 public sealed class CustomFeatureDetailCustomFormConfigurationColumn1Attribute : Dto
 {
     public string? DataType { get; set; }
@@ -224,7 +222,7 @@ public sealed class CustomFeatureDetailCustomFormConfigurationColumn1Attribute :
     public string? Type { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>attributes</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>attributes</c>.</summary>
 public sealed class CustomFeatureDetailCustomFormConfigurationColumn2Attribute : Dto
 {
     public string? Name { get; set; }

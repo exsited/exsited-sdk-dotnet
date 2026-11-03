@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Usages.UsagesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class Usage : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/usages",
@@ -40,7 +39,7 @@ public sealed class Usage : Dto
 
     public double? Quantity { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Source { get; set; }
 
     public string? StartTime { get; set; }
@@ -49,7 +48,7 @@ public sealed class Usage : Dto
 
     public string? Type { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Uom { get; set; }
 
     public long? Version { get; set; }
@@ -58,7 +57,6 @@ public sealed class Usage : Dto
 /// <summary>One page of <see cref="Usage"/> records, under <c>data</c>.</summary>
 public sealed class UsageList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/usages",
@@ -75,10 +73,9 @@ public sealed class UsageList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class UsagesView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "POST /api/{api_version}/usages",
@@ -135,10 +132,9 @@ public sealed class UsagesView : Dto
     public string? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class UsageUpdated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/usages/{usage_id}",
@@ -158,7 +154,7 @@ public sealed class UsageUpdated : Dto
     public string? Status { get; set; }
 }
 
-/// <summary>An object sent as <c>last_updated_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>last_updated_by</c>.</summary>
 public sealed class LastUpdatedBy : Dto
 {
     public string? Name { get; set; }

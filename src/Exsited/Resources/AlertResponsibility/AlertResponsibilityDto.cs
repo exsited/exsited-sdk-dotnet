@@ -1,9 +1,8 @@
 namespace Exsited.Resources.AlertResponsibility.AlertResponsibilityDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class AlertResponsibilityView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/alert_responsibility",
@@ -38,7 +37,6 @@ public sealed class AlertResponsibilityView : Dto
 /// <summary>One page of <see cref="AlertResponsibilityView"/> records, under <c>data</c>.</summary>
 public sealed class AlertResponsibilityList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/alert_responsibility",

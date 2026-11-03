@@ -89,10 +89,10 @@ public static class AccountsUrls
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/accounts/{account_id}/communications/emails</c> and <c>GET /api/{api_version}/accounts/{account_id}/communications/emails/{email_id}</c>.</summary>
     public const string EmailKey = "email";
 
-    /// <summary>The key one record arrives under, on the 4 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string NoteKey = "note";
 
-    /// <summary>The key one record arrives under, on the 22 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string AccountKey = "account";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/accounts/{account_id}/notes/{note_uuid}/files</c> and <c>GET /api/{api_version}/accounts/{account_id}/notes/{note_uuid}/files/{file_uuid}</c>.</summary>
@@ -101,9 +101,9 @@ public static class AccountsUrls
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/accounts/{account_id}/kpis</c>.</summary>
     public const string AccountKpisKey = "account_kpis";
 
-    /// <summary>The key one record arrives under, on the 8 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string CustomObjectKey = "custom_object";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string CustomComponentObjectKey = "custom_component_object";
 }

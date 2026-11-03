@@ -1,9 +1,8 @@
 namespace Exsited.Resources.PurchaseCreditNoteApplications.PurchaseCreditNoteApplicationsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseCreditNoteApplication : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_credit_note_applications",
@@ -25,7 +24,7 @@ public sealed class PurchaseCreditNoteApplication : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -50,7 +49,6 @@ public sealed class PurchaseCreditNoteApplication : Dto
 /// <summary>One page of <see cref="PurchaseCreditNoteApplication"/> records, under <c>data</c>.</summary>
 public sealed class PurchaseCreditNoteApplicationList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_credit_note_applications",
@@ -67,10 +65,9 @@ public sealed class PurchaseCreditNoteApplicationList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class PurchaseCreditNoteApplicationRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/purchase_credit_note_applications/{purchase_credit_note_application_id}",
@@ -90,7 +87,7 @@ public sealed class PurchaseCreditNoteApplicationRead : Dto
 
     public string? IssueDate { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -108,7 +105,7 @@ public sealed class PurchaseCreditNoteApplicationRead : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }

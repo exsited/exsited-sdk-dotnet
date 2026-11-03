@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Alerts.AlertsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class AlertsView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/alerts",
@@ -19,10 +18,9 @@ public sealed class AlertsView : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class AlertsEmployee : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/alerts/employee/{employee_id}",
@@ -32,7 +30,6 @@ public sealed class AlertsEmployee : Dto
 /// <summary>One page of <see cref="AlertsEmployee"/> records, under <c>data</c>.</summary>
 public sealed class AlertsEmployeeList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/alerts/employee/{employee_id}",
@@ -49,10 +46,9 @@ public sealed class AlertsEmployeeList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class AlertsLabour : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/alerts/labour/{labour_id}",
@@ -62,7 +58,6 @@ public sealed class AlertsLabour : Dto
 /// <summary>One page of <see cref="AlertsLabour"/> records, under <c>data</c>.</summary>
 public sealed class AlertsLabourList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/alerts/labour/{labour_id}",

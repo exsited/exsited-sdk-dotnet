@@ -1,9 +1,8 @@
 namespace Exsited.Resources.SettingsWorkflows.SettingsWorkflowsDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsWorkflow : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/workflows",
@@ -12,15 +11,15 @@ public sealed class SettingsWorkflow : Dto
 
     protected override string? EnvelopeKey => "workflow";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Code { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
     public string? DisplayName { get; set; }
@@ -37,7 +36,7 @@ public sealed class SettingsWorkflow : Dto
 
     public bool? IsPreBuilt { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -52,7 +51,6 @@ public sealed class SettingsWorkflow : Dto
 /// <summary>One page of <see cref="SettingsWorkflow"/> records, under <c>data</c>.</summary>
 public sealed class SettingsWorkflowList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/workflows",

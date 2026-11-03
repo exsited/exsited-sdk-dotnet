@@ -104,13 +104,13 @@ public static class OrdersUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 22 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string OrderKey = "order";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/orders/{order_id}/lines/{line_uuid}</c>.</summary>
     public const string OrderLineKey = "order_line";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string NoteKey = "note";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/orders/{order_id}/notes/{order_note_id}/files</c> and <c>GET /api/{api_version}/orders/{order_id}/notes/{order_note_id}/files/{order_file_id}</c>.</summary>

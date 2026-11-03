@@ -315,6 +315,18 @@ public sealed partial class ExsitedClient
     public Resources.NoteGroups.NoteGroups NoteGroups =>
         _noteGroups ??= new Resources.NoteGroups.NoteGroups(this);
 
+    private Resources.OperatorGroups.OperatorGroups? _operatorGroups;
+
+    /// <summary>The operator groups endpoints, built on first use.</summary>
+    public Resources.OperatorGroups.OperatorGroups OperatorGroups =>
+        _operatorGroups ??= new Resources.OperatorGroups.OperatorGroups(this);
+
+    private Resources.Operators.Operators? _operators;
+
+    /// <summary>The operators endpoints, built on first use.</summary>
+    public Resources.Operators.Operators Operators =>
+        _operators ??= new Resources.Operators.Operators(this);
+
     private Resources.Orders.Orders? _orders;
 
     /// <summary>The orders endpoints, built on first use.</summary>
@@ -530,6 +542,12 @@ public sealed partial class ExsitedClient
     /// <summary>The usages endpoints, built on first use.</summary>
     public Resources.Usages.Usages Usages =>
         _usages ??= new Resources.Usages.Usages(this);
+
+    private Resources.UserSettings.UserSettings? _userSettings;
+
+    /// <summary>The user settings endpoints, built on first use.</summary>
+    public Resources.UserSettings.UserSettings UserSettings =>
+        _userSettings ??= new Resources.UserSettings.UserSettings(this);
 
     private Resources.Webhooks.Webhooks? _webhooks;
 

@@ -1,9 +1,8 @@
 namespace Exsited.Resources.CreditNotes.CreditNotesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNote : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_notes",
@@ -73,7 +72,6 @@ public sealed class CreditNote : Dto
 /// <summary>One page of <see cref="CreditNote"/> records, under <c>data</c>.</summary>
 public sealed class CreditNoteList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_notes",
@@ -90,10 +88,9 @@ public sealed class CreditNoteList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteRead : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_notes/{credit_note_id}",
@@ -142,10 +139,9 @@ public sealed class CreditNoteRead : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteUpdated : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "PATCH /api/{api_version}/credit_notes/{credit_note_id}",
@@ -170,7 +166,7 @@ public sealed class CreditNoteUpdated : Dto
     public long? Version { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreatedBy : Dto
 {
     public string? Name { get; set; }
@@ -178,10 +174,9 @@ public sealed class CreatedBy : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteItems : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_notes/{credit_note_id}/items",
@@ -196,7 +191,7 @@ public sealed class CreditNoteItems : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>One entry of a list sent as <c>items</c>, merged over every record measured.</summary>
+/// <summary>One entry of a list sent as <c>items</c>.</summary>
 public sealed class CreditNoteItem : Dto
 {
     public string? CreditNoteFromBlankMethod { get; set; }
@@ -211,7 +206,7 @@ public sealed class CreditNoteItem : Dto
 
     public string? CreditNoteTotal { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Invoice { get; set; }
 
     public string? Object { get; set; }
@@ -229,10 +224,9 @@ public sealed class CreditNoteItem : Dto
     public string? RefundTotal { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteApplicationsView : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_notes/{credit_note_id}/credit_note_applications",
@@ -240,7 +234,7 @@ public sealed class CreditNoteApplicationsView : Dto
 
     protected override string? EnvelopeKey => "credit_note";
 
-    /// <summary>Empty in every record measured, so its entries are untyped.</summary>
+    /// <summary>Entries are untyped.</summary>
     public IReadOnlyList<object?>? Applications { get; set; }
 
     public string? Href { get; set; }
@@ -248,10 +242,9 @@ public sealed class CreditNoteApplicationsView : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class CreditNoteNote : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_notes/{credit_note_id}/notes",
@@ -260,7 +253,7 @@ public sealed class CreditNoteNote : Dto
 
     protected override string? EnvelopeKey => "note";
 
-    /// <summary>Empty in every record measured, so its entries are untyped.</summary>
+    /// <summary>Entries are untyped.</summary>
     public IReadOnlyList<object?>? Attachments { get; set; }
 
     public string? Content { get; set; }
@@ -271,34 +264,33 @@ public sealed class CreditNoteNote : Dto
 
     public CreditNoteNoteDetail? CreditNote { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Group { get; set; }
 
     public string? Href { get; set; }
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedOn { get; set; }
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? User { get; set; }
 
     public long? Version { get; set; }
 
-    /// <summary>Empty in every record measured, so its entries are untyped.</summary>
+    /// <summary>Entries are untyped.</summary>
     public IReadOnlyList<object?>? Watchers { get; set; }
 }
 
 /// <summary>One page of <see cref="CreditNoteNote"/> records, under <c>data</c>.</summary>
 public sealed class CreditNoteNoteList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/credit_notes/{credit_note_id}/notes",
@@ -315,7 +307,7 @@ public sealed class CreditNoteNoteList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>credit_note</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>credit_note</c>.</summary>
 public sealed class CreditNoteNoteDetail : Dto
 {
     public string? Href { get; set; }
@@ -325,7 +317,7 @@ public sealed class CreditNoteNoteDetail : Dto
     public string? Object { get; set; }
 }
 
-/// <summary>An object sent as <c>created_by</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>created_by</c>.</summary>
 public sealed class CreditNoteNoteCreatedBy : Dto
 {
     public string? Id { get; set; }

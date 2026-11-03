@@ -1,9 +1,8 @@
 namespace Exsited.Resources.ApprovalProfiles.ApprovalProfilesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsApprovalProfile : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/approval_profiles",
@@ -12,12 +11,12 @@ public sealed class SettingsApprovalProfile : Dto
 
     protected override string? EnvelopeKey => "approval_profile";
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Description { get; set; }
 
     public string? DisplayName { get; set; }
@@ -26,7 +25,7 @@ public sealed class SettingsApprovalProfile : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -41,7 +40,6 @@ public sealed class SettingsApprovalProfile : Dto
 /// <summary>One page of <see cref="SettingsApprovalProfile"/> records, under <c>data</c>.</summary>
 public sealed class SettingsApprovalProfileList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/approval_profiles",

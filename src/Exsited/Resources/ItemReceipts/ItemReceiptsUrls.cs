@@ -14,7 +14,7 @@ public static class ItemReceiptsUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string ItemReceiptKey = "item_receipt";
 
     /// <summary>The key one record arrives under, on <c>POST /api/{api_version}/item_receipts</c>.</summary>

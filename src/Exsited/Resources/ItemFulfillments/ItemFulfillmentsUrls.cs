@@ -14,7 +14,7 @@ public static class ItemFulfillmentsUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 5 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string ItemFulfillmentKey = "item_fulfillment";
 
     /// <summary>A record key no view in this family unwraps.</summary>

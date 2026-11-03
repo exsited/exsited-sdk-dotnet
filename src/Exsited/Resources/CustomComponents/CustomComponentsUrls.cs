@@ -62,7 +62,7 @@ public static class CustomComponentsUrls
     /// <summary>The key one record arrives under, on <c>POST /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity</c> and <c>GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/activity/{activity_id}</c>.</summary>
     public const string CustomComponentObjectActivityKey = "custom_component_object_activity";
 
-    /// <summary>The key one record arrives under, on the 4 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string NoteKey = "note";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/components/{component_uuid}/objects/{component_object_id}/notes/{note_id}/files/{file_id}</c>.</summary>

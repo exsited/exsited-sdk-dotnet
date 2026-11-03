@@ -55,7 +55,7 @@ public static class InvoicesUrls
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/invoices/{invoice_id}/item_fulfillments</c> and <c>GET /api/{api_version}/invoices/{invoice_id}/item_fulfillments/{fulfillment_id}</c>.</summary>
     public const string ItemFulfillmentKey = "item_fulfillment";
 
-    /// <summary>The key one record arrives under, on the 10 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string InvoiceKey = "invoice";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/invoices/{invoice_id}/return_merchandise_authorisations/{rma_id}</c>.</summary>

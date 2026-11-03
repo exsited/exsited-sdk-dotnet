@@ -1,9 +1,8 @@
 namespace Exsited.Resources.Countries.CountriesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsCountry : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/countries",
@@ -15,12 +14,12 @@ public sealed class SettingsCountry : Dto
 
     public string? Code { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? DefaultAreaCode { get; set; }
 
     public string? DefaultCity { get; set; }
@@ -39,7 +38,7 @@ public sealed class SettingsCountry : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -54,7 +53,6 @@ public sealed class SettingsCountry : Dto
 /// <summary>One page of <see cref="SettingsCountry"/> records, under <c>data</c>.</summary>
 public sealed class SettingsCountryList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/countries",

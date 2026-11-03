@@ -22,7 +22,7 @@ public static class GiftCertificatesUrls
     /// <summary>The key a listing's records arrive under, the v4 envelope's own; the pagers' <c>recordKey</c>.</summary>
     public const string DataKey = "data";
 
-    /// <summary>The key one record arrives under, on the 4 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string GiftCertificateKey = "gift_certificate";
 
     /// <summary>The key one record arrives under, on <c>GET /api/{api_version}/gift_certificates/{gc_id}/allocations/{allocation_id}</c>.</summary>

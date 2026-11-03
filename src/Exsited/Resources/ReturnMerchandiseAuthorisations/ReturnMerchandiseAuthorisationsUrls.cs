@@ -36,7 +36,7 @@ public static class ReturnMerchandiseAuthorisationsUrls
     /// <summary>A record key no view in this family unwraps.</summary>
     public const string ReceiveReturnMerchandiseAuthorisationKey = "receive_return_merchandise_authorisation";
 
-    /// <summary>The key one record arrives under, on the 3 endpoints its views were measured from.</summary>
+    /// <summary>The key one record arrives under.</summary>
     public const string ReturnMerchandiseAuthorisationKey = "return_merchandise_authorisation";
 
     /// <summary>A record key no view in this family unwraps.</summary>

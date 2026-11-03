@@ -783,7 +783,7 @@ public sealed class Settings : BoundResource
                 DtoType = typeof(SettingsFieldSettingRead),
             }, cancellationToken);
 
-    /// <summary><c>GET /api/{api_version}/settings/general_settings/{group}</c>.</summary>
+    /// <summary><c>GET /api/{api_version}/settings/general_settings/{group}</c>; <c>group</c> is one of <c>account</c>, <c>dashboard</c>, <c>date_and_time</c>, <c>display</c>, <c>general</c>, <c>item</c>, <c>labour</c>, <c>order</c>, <c>portal</c>, <c>purchase</c>, <c>security</c> and <c>transaction</c>, any case.</summary>
     public Task<ApiResponse> GetSettingsGeneralSettingsAsync(
         string group, IReadOnlyDictionary<string, object?>? queryParams = null,
         bool? raiseOnError = null, CancellationToken cancellationToken = default,

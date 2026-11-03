@@ -1,9 +1,8 @@
 namespace Exsited.Resources.ShippingRules.ShippingRulesDto;
 
-/// <summary>The body the endpoints in <c>MeasuredFrom</c> answer.</summary>
+/// <summary>A typed view of the response body.</summary>
 public sealed class SettingsShippingRule : Dto
 {
-    /// <summary>The endpoints this view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/shipping_rules",
@@ -16,7 +15,7 @@ public sealed class SettingsShippingRule : Dto
 
     public SettingsShippingRuleConfiguration? Configuration { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? CreatedBy { get; set; }
 
     public string? CreatedOn { get; set; }
@@ -27,7 +26,7 @@ public sealed class SettingsShippingRule : Dto
 
     public string? Id { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? LastUpdatedBy { get; set; }
 
     public string? LastUpdatedOn { get; set; }
@@ -36,7 +35,7 @@ public sealed class SettingsShippingRule : Dto
 
     public string? Object { get; set; }
 
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? ShippingClass { get; set; }
 
     public string? Status { get; set; }
@@ -47,7 +46,6 @@ public sealed class SettingsShippingRule : Dto
 /// <summary>One page of <see cref="SettingsShippingRule"/> records, under <c>data</c>.</summary>
 public sealed class SettingsShippingRuleList : Dto
 {
-    /// <summary>The endpoints this page view was measured from.</summary>
     public static readonly IReadOnlyList<string> MeasuredFrom = new[]
     {
         "GET /api/{api_version}/settings/shipping_rules",
@@ -64,12 +62,12 @@ public sealed class SettingsShippingRuleList : Dto
     public string? Url { get; set; }
 }
 
-/// <summary>An object sent as <c>configuration</c>, merged over every record measured.</summary>
+/// <summary>An object sent as <c>configuration</c>.</summary>
 public sealed class SettingsShippingRuleConfiguration : Dto
 {
-    /// <summary>Null in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public object? Rate { get; set; }
 
-    /// <summary>Empty in every record measured, so untyped.</summary>
+    /// <summary>Untyped.</summary>
     public IReadOnlyList<object?>? Zones { get; set; }
 }
